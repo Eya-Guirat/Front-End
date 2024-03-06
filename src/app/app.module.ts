@@ -8,7 +8,9 @@ import { MainSidebarComponent } from './main-sidebar/main-sidebar.component';
 import { ContentWrapperComponent } from './content-wrapper/content-wrapper.component';
 import { ControlSidebarComponent } from './control-sidebar/control-sidebar.component';
 import { MainFooterComponent } from './main-footer/main-footer.component';
-
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,11 +18,14 @@ import { MainFooterComponent } from './main-footer/main-footer.component';
     MainSidebarComponent,
     ContentWrapperComponent,
     ControlSidebarComponent,
-    MainFooterComponent
+    MainFooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
