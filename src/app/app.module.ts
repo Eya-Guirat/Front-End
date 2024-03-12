@@ -11,6 +11,9 @@ import { MainFooterComponent } from './main-footer/main-footer.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { IndexComponent } from './working hours/project/index/index.component';
+import { CreateComponent } from './working hours/project/create/create.component';
+import { EditComponent } from './working hours/project/edit/edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     ContentWrapperComponent,
     ControlSidebarComponent,
     MainFooterComponent,
+    IndexComponent,
+    CreateComponent,
+    EditComponent,
 
   ],
   imports: [
