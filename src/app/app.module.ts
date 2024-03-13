@@ -16,6 +16,9 @@ import { CreateComponent } from './working hours/project/create/create.component
 import { EditComponent } from './working hours/project/edit/edit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
+import { CreateProjectComponent } from './working_hours/projects/create-project/create-project.component';
+import { EditProjectComponent } from './working_hours/projects/edit-project/edit-project.component';
+import { IndexProjectComponent } from './working_hours/projects/index-project/index-project.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { LoginComponent } from './login/login.component';
     CreateComponent,
     EditComponent,
     LoginComponent,
+    CreateProjectComponent,
+    EditProjectComponent,
+    IndexProjectComponent,
 
 
   ],
