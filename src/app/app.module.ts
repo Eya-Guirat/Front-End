@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { IndexComponent } from './working hours/project/index/index.component';
 import { CreateComponent } from './working hours/project/create/create.component';
 import { EditComponent } from './working hours/project/edit/edit.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { EditComponent } from './working hours/project/edit/edit.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
