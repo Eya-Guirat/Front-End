@@ -5,7 +5,7 @@ import { CreateProjectComponent } from './working_hours/projects/create-project/
 
 
 const routes: Routes = [
-  { path:"login", component: LoginComponent},
+  { path:"login", component: LoginComponent },
   { path:"create_project", component: CreateProjectComponent},
 ];
 
