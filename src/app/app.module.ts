@@ -15,6 +15,7 @@ import { IndexComponent } from './working hours/project/index/index.component';
 import { CreateComponent } from './working hours/project/create/create.component';
 import { EditComponent } from './working hours/project/edit/edit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     IndexComponent,
     CreateComponent,
     EditComponent,
+    LoginComponent,
 
 
   ],
