@@ -1,0 +1,59 @@
+.sidebar {
+  float: left;
+  /* Make the sidebar float to the left */
+  width: 200px;
+  /* Set the sidebar's width */
+}
+
+/* Target the table element */
+.content-header {
+  margin-left: 292px;
+  /* Adjust the margin to position behind the sidebar */
+  /* Other table styling can be added here */
+}
+
+.content {
+  margin-left: 300px;
+}
+
+.row {
+  width: 1500px;
+  height: 50px;
+}
+
+h2.m-0 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 25px;
+  height: 20px;
+}
+
+.card-footer {
+  background-color: transparent;
+  height: 70px;
+}
+
+label {
+  height: 35px;
+  font-size: 16px;
+}
+
+nav.main-header.navbar-expand.navbar-white.navbar-light {
+  margin-right: 50px;
+}
+
+.btn.btn-sm.btn-info {
+  margin-right: 8px;
+  background-color: rgb(7, 187, 7);
+}
+
+.btn.btn-sm.btn-danger.alert-delete {
+  background-color: rgb(216, 7, 7);
+
+}
+
+.td {
+  margin-right: 20px;
+}
