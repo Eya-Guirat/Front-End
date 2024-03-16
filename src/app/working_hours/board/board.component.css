@@ -1,0 +1,46 @@
+body {
+  font-family: sans-serif;
+}
+
+.kanban-board {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.kanban-column {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+
+}
+
+.kanban-column h2 {
+  margin-bottom: 15px;
+}
+
+.kanban-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.kanban-column li {
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 40px;
+
+}
+
+h2 {
+  font-size: 25px;
+  height: 20px;
+}
+
+.kan {
+  padding-left: 300px;
+}

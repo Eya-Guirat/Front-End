@@ -8,8 +8,7 @@
 /* Target the table element */
 .content-header {
   margin-left: 292px;
-  /* Adjust the margin to position behind the sidebar */
-  /* Other table styling can be added here */
+
 }
 
 .content {
@@ -35,25 +34,24 @@ h2 {
   height: 70px;
 }
 
-label {
-  height: 35px;
-  font-size: 16px;
-}
-
-nav.main-header.navbar-expand.navbar-white.navbar-light {
-  margin-right: 50px;
-}
 
 .btn.btn-sm.btn-info {
-  margin-right: 8px;
   background-color: rgb(7, 187, 7);
+  margin-right: 10px;
 }
 
 .btn.btn-sm.btn-danger.alert-delete {
   background-color: rgb(216, 7, 7);
-
 }
 
-.td {
-  margin-right: 20px;
+.tt {
+  padding-left: 300px;
+}
+
+.tf {
+  padding-left: 300px;
+}
+
+.tl {
+  padding-left: 300px;
 }
