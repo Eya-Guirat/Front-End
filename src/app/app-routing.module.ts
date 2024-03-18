@@ -6,12 +6,17 @@ import { IndexProjectComponent } from './working_hours/projects/index-project/in
 import { LoginComponent } from './auth/login/login.component';
 import { BoardComponent } from './working_hours/board/board.component';
 
+import { TicketsComponent } from './working_hours/tickets/tickets.component';
+
+
+
 const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "create_project", component: CreateProjectComponent },
   { path: "edit_project", component: EditProjectComponent },
   { path: "index_project", component: IndexProjectComponent },
   { path: "board", component: BoardComponent },
+  { path: "tickets", component: TicketsComponent },
 ];
 
 @NgModule({
