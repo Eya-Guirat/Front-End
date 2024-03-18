@@ -24,7 +24,12 @@ export class LoginComponent {
     }
 
     login(){
-      console.log(this.loginForm.value)
+      //console.log(this.loginForm.value);
+      this.service.login(this.loginForm.value).subscribe((response) => {
+        console.log(response);
+      }
+
+      )
     }
 
 }

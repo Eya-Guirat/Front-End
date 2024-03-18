@@ -23,9 +23,15 @@ import { LoginComponent } from './auth/login/login.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button';
+import { CreateTicketComponent } from './working_hours/tickets/create-ticket/create-ticket.component';
+import { EditTicketComponent } from './working_hours/tickets/edit-ticket/edit-ticket.component';
+import { IndexTicketComponent } from './working_hours/tickets/index-ticket/index-ticket.component';
+import { CreateBoardComponent } from './working_hours/board/create-board/create-board.component';
+import { EditBoardComponent } from './working_hours/board/edit-board/edit-board.component';
+import { IndexBoardComponent } from './working_hours/board/index-board/index-board.component';
 
-import { TicketsComponent } from './working_hours/tickets/tickets.component';
-import { BoardComponent } from './working_hours/board/board.component';
+
+
 
 
 
@@ -43,18 +49,13 @@ import { BoardComponent } from './working_hours/board/board.component';
     CreateProjectComponent,
     EditProjectComponent,
     IndexProjectComponent,
-
     LoginComponent,
-    TicketsComponent,
-    BoardComponent,
-
-
-    LoginComponent,
-
-    TicketsComponent,
-    BoardComponent,
-
-
+    CreateTicketComponent,
+    EditTicketComponent,
+    IndexTicketComponent,
+    CreateBoardComponent,
+    EditBoardComponent,
+    IndexBoardComponent,
 
   ],
   imports: [
