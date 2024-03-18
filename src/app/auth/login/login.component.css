@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 90vh;
+
 }
 
 .child{
@@ -11,7 +12,12 @@
 }
 
 .form-title{
-  margin-left: 170px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+
 }
 
 .login-form{
