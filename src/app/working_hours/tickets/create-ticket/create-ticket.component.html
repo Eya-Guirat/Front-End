@@ -17,26 +17,42 @@
             <!-- form start -->
             <form role="form" action="#" method="POST">
 
-              <label for="nom-projet">Ticket Name :</label><br>
-              <input type="text" id="nom-projet" name="nom-projet" placeholder="Enter ticket name" required><br>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="nom">Ticket Name :</label><br>
+                  <input type="text" class="form-control" id="nom" placeholder="Enter ticket name" name="name">
+                  <span class="text-danger"></span>
+                </div>
 
-              <label class="t" projet-selection>Existing ticket:</label><br>
-              <select id="projet-selection" name="projet-selection">
-                <option value="">Choose a ticket</option>
-                <option value="projet-a">ticket A</option>
-                <option value="projet-b">ticket B</option>
-                <option value="projet-c">ticket C</option>
-              </select>
 
-              <label class="tk" for="duree-projet">Project Duration (Hours) :</label><br>
-              <input type="number" id="duree-projet" name="duree-projet" placeholder="ticket duration" required>
 
-              <label class="tp" for="duree-projet">Date :</label>
-              <input type="date" id="duree-projet" name="duree-projet" required><br>
+                <label for="nom">Existing ticket:</label>
+                <select id="projet-selection" name="projet-selection">
+                  <option value="">Choose a ticket</option>
+                  <option value="projet-a">ticket A</option>
+                  <option value="projet-b">ticket B</option>
+                  <option value="projet-c">ticket C</option>
+                </select>
 
-              <div class="card-footer">
-                <button type="submit" class="btn btn-primary"> Submit </button>
+
+
+                <div class="form-group">
+                  <label class="tk" for="duree-projet">Project Duration (Hours) :</label>
+                  <input type="number" id="duree-projet" name="duree-projet" placeholder="ticket duration" required>
+                </div>
+
+
+                <label class="tp" for="duree-projet">Date :</label>
+                <input type="date" id="duree-projet" name="duree-projet" required><br>
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary"> Submit </button>
+                </div>
               </div>
-
-
             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

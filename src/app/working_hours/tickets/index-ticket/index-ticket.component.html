@@ -1,1 +1,63 @@
-<p>index-ticket works!</p>
+<app-control-sidebar></app-control-sidebar>
+<app-main-header></app-main-header>
+<app-main-sidebar></app-main-sidebar>
+<app-main-footer></app-main-footer>
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h2 class="m-0 text-dark">Tickets</h2>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+
+<!-- Main content -->
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="card card-primary card-outline">
+          <div class="card-body">
+
+            <h2>List of Tickets</h2>
+
+            <a routerLink="/create_project" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i>Add Ticket</a>
+
+            <table class="table table-borderd ">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th class="tl">Ticket Name</th>
+                  <th class="">Existing Ticket</th>
+                  <th class="">Project Duration</th>
+                  <th class="">Date</th>
+                  <th class="">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+
+
+                <tr>
+                  <td></td>
+                  <td></td>
+
+                  <td class="tf">
+                    <a routerLink="/edit_project" class="btn btn-sm btn-info"> Edit</a>
+                    <a href="javascript:;" class="btn btn-sm btn-danger alert-delete" data-form-id="">Delete</a>
+
+                    <form id="" action="" method="POST"></form>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div><!-- /.card -->
+      </div>
+    </div>
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content -->

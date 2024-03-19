@@ -6,6 +6,9 @@ import { IndexProjectComponent } from './working_hours/projects/index-project/in
 import { LoginComponent } from './auth/login/login.component';
 
 import { CreateTicketComponent } from './working_hours/tickets/create-ticket/create-ticket.component';
+import { IndexTicketComponent } from './working_hours/tickets/index-ticket/index-ticket.component';
+import { EditTicketComponent } from './working_hours/tickets/edit-ticket/edit-ticket.component';
+
 
 
 
@@ -16,9 +19,15 @@ const routes: Routes = [
   { path: "create_project", component: CreateProjectComponent },
   { path: "edit_project", component: EditProjectComponent },
   { path: "index_project", component: IndexProjectComponent },
+<<<<<<< Updated upstream
   { path: "create_ticket", component: CreateTicketComponent},
 
 
+=======
+  { path: "create_ticket", component: CreateTicketComponent },
+  { path: "edit_ticket", component: EditTicketComponent },
+  { path: "index_ticket", component: IndexTicketComponent },
+>>>>>>> Stashed changes
 ];
 
 @NgModule({
