@@ -30,7 +30,7 @@ import { IndexBoardComponent } from './working_hours/board/index-board/index-boa
 import { CreateVacationComponent } from './vacation/create-vacation/create-vacation.component';
 import { EditVacationComponent } from './vacation/edit-vacation/edit-vacation.component';
 import { IndexVacationComponent } from './vacation/index-vacation/index-vacation.component';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 
@@ -57,11 +57,17 @@ import { IndexVacationComponent } from './vacation/index-vacation/index-vacation
     CreateBoardComponent,
     EditBoardComponent,
     IndexBoardComponent,
+<<<<<<< HEAD
 
     CreateVacationComponent,
     EditVacationComponent,
     IndexVacationComponent,
 
+=======
+    CreateVacationComponent,
+    EditVacationComponent,
+    IndexVacationComponent,
+>>>>>>> 19ab0e1851663771afa8eaa9fb589dd8c5eab6ea
 
   ],
   imports: [
@@ -74,6 +80,7 @@ import { IndexVacationComponent } from './vacation/index-vacation/index-vacation
     MatToolbarModule,
     MatInputModule,
     MatButtonModule,
+    MatSnackBarModule,
     BrowserAnimationsModule
   ],
   providers: [],

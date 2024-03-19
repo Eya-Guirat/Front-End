@@ -22,6 +22,11 @@ const routes: Routes = [
   { path: "create_project", component: CreateProjectComponent },
   { path: "edit_project", component: EditProjectComponent },
   { path: "index_project", component: IndexProjectComponent },
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 19ab0e1851663771afa8eaa9fb589dd8c5eab6ea
   { path: "create_ticket", component: CreateTicketComponent },
   { path: "create_vacation", component: CreateVacationComponent },
   { path: "edit_vacation", component: EditVacationComponent },
@@ -30,6 +35,10 @@ const routes: Routes = [
 
   { path: "edit_ticket", component: EditTicketComponent },
   { path: "index_ticket", component: IndexTicketComponent },
+<<<<<<< HEAD
+=======
+
+>>>>>>> 19ab0e1851663771afa8eaa9fb589dd8c5eab6ea
 ];
 
 @NgModule({

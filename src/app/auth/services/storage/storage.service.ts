@@ -19,4 +19,38 @@ export class StorageService {
     window.localStorage.setItem(TOKEN, token);
   }
 
+  static getToken():string{
+    return window.localStorage.getItem(TOKEN);
+  }
+
+  static getUser():any{
+    return JSON.parse(localStorage.getItem(USER))
+  }
+
+  static getUserRole():string{
+    const user = this.getUser();
+    if (user == null) {
+      return '';
+    }
+    return user.role;
+  }
+
+
+  static isAdminLoggedIn(): boolean {
+    if (this.getToken() == null){
+      return true;
+    }
+    const role: string = this.getUserRole();
+    return role == "ADMIN";
+  }
+
+  static isEmployeeLoggedIn(): boolean{
+    if (this.getToken() == null){
+      return true;
+    }
+    const role: string = this.getUserRole();
+    return role == "EMPLOYEE";
+  }
+
+
 }
