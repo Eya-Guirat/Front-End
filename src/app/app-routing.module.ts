@@ -8,6 +8,9 @@ import { LoginComponent } from './auth/login/login.component';
 import { CreateTicketComponent } from './working_hours/tickets/create-ticket/create-ticket.component';
 import { IndexTicketComponent } from './working_hours/tickets/index-ticket/index-ticket.component';
 import { EditTicketComponent } from './working_hours/tickets/edit-ticket/edit-ticket.component';
+import { CreateVacationComponent } from './vacation/create-vacation/create-vacation.component';
+import { EditVacationComponent } from './vacation/edit-vacation/edit-vacation.component';
+import { IndexVacationComponent } from './vacation/index-vacation/index-vacation.component';
 
 
 
@@ -19,15 +22,14 @@ const routes: Routes = [
   { path: "create_project", component: CreateProjectComponent },
   { path: "edit_project", component: EditProjectComponent },
   { path: "index_project", component: IndexProjectComponent },
-<<<<<<< Updated upstream
-  { path: "create_ticket", component: CreateTicketComponent},
-
-
-=======
   { path: "create_ticket", component: CreateTicketComponent },
+  { path: "create_vacation", component: CreateVacationComponent },
+  { path: "edit_vacation", component: EditVacationComponent },
+  { path: "index_vacation", component: IndexVacationComponent },
+
+
   { path: "edit_ticket", component: EditTicketComponent },
   { path: "index_ticket", component: IndexTicketComponent },
->>>>>>> Stashed changes
 ];
 
 @NgModule({

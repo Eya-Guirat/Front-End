@@ -1,1 +1,48 @@
-<p>create-vacation works!</p>
+<app-control-sidebar></app-control-sidebar>
+<app-main-header></app-main-header>
+<app-main-sidebar></app-main-sidebar>
+<app-main-footer></app-main-footer>
+
+<h2 class="m-0 text-dark">Vacation</h2><br>
+<div class="content">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card card-primary card-outline">
+          <div class="card-body">
+
+            <h2>Create Vacation</h2><br>
+
+            <!-- form start -->
+            <form role="form" action="#" method="POST">
+
+
+              <label for="nom">Vacation Type :</label>
+              <select id="projet-selection" class="form-control" id="nom" name="name">
+                <option>Select Vacation Type</option>
+                <option value="projet-a">Sick Leave</option>
+                <option value="projet-b">Work from home</option>
+                <option value="projet-c">Maternity</option>
+                <option value="projet-c">Wedding</option>
+                <option value="projet-c">Child's birth</option>
+              </select>
+
+
+              <label class="tp" for="duree-projet">Start Date :</label>
+              <input type="date" id="duree-projet" name="duree-projet" class="form-control" required>
+
+              <label class="tp" for="duree-projet">End Date :</label>
+              <input type="date" id="duree-projet" name="duree-projet" class="form-control" required><br>
+
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary"> Submit </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

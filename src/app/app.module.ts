@@ -57,12 +57,11 @@ import { IndexVacationComponent } from './vacation/index-vacation/index-vacation
     CreateBoardComponent,
     EditBoardComponent,
     IndexBoardComponent,
-<<<<<<< Updated upstream
+
     CreateVacationComponent,
     EditVacationComponent,
     IndexVacationComponent,
-=======
->>>>>>> Stashed changes
+
 
   ],
   imports: [
