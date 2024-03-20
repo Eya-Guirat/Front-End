@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
@@ -18,33 +17,24 @@ import { HttpClientModule } from '@angular/common/http'
 import { CreateProjectComponent } from './working_hours/projects/create-project/create-project.component';
 import { EditProjectComponent } from './working_hours/projects/edit-project/edit-project.component';
 import { IndexProjectComponent } from './working_hours/projects/index-project/index-project.component';
-
 import { LoginComponent } from './auth/login/login.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button';
-<<<<<<< Updated upstream
 import { CreateTicketComponent } from './working_hours/tickets/create-ticket/create-ticket.component';
 import { EditTicketComponent } from './working_hours/tickets/edit-ticket/edit-ticket.component';
 import { IndexTicketComponent } from './working_hours/tickets/index-ticket/index-ticket.component';
 import { CreateBoardComponent } from './working_hours/board/create-board/create-board.component';
 import { EditBoardComponent } from './working_hours/board/edit-board/edit-board.component';
 import { IndexBoardComponent } from './working_hours/board/index-board/index-board.component';
+import { CreateVacationComponent } from './vacation/create-vacation/create-vacation.component';
+import { EditVacationComponent } from './vacation/edit-vacation/edit-vacation.component';
+import { IndexVacationComponent } from './vacation/index-vacation/index-vacation.component';
 
 
 
 
 
-=======
-import { TicketsComponent } from './working_hours/tickets/tickets.component';
-import { BoardComponent } from './working_hours/board/board.component';
-import { EditTicketComponent } from './working_hours/tickets/edit-ticket/edit-ticket.component';
-import { IndexTicketComponent } from './working_hours/tickets/index-ticket/index-ticket.component';
-import { CreateTicketComponent } from './working_hours/tickets/create-ticket/create-ticket.component';
-import { CreateBoardComponent } from './working_hours/board/create-board/create-board.component';
-import { EditBoardComponent } from './working_hours/board/edit-board/edit-board.component';
-import { IndexBoardComponent } from './working_hours/board/index-board/index-board.component';
->>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -61,26 +51,15 @@ import { IndexBoardComponent } from './working_hours/board/index-board/index-boa
     EditProjectComponent,
     IndexProjectComponent,
     LoginComponent,
-<<<<<<< Updated upstream
     CreateTicketComponent,
     EditTicketComponent,
     IndexTicketComponent,
     CreateBoardComponent,
     EditBoardComponent,
     IndexBoardComponent,
-=======
-
-    TicketsComponent,
-    BoardComponent,
-    EditTicketComponent,
-    IndexTicketComponent,
-    CreateTicketComponent,
-    CreateBoardComponent,
-    EditBoardComponent,
-    IndexBoardComponent,
-
-
->>>>>>> Stashed changes
+    CreateVacationComponent,
+    EditVacationComponent,
+    IndexVacationComponent,
 
   ],
   imports: [

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../services/auth/auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { StorageService } from '../services/storage/storage.service';
 
 @Component({
   selector: 'app-login',
@@ -24,12 +25,15 @@ export class LoginComponent {
     }
 
     login(){
-      //console.log(this.loginForm.value);
-      this.service.login(this.loginForm.value).subscribe((response) => {
+      console.log(this.loginForm.value);
+      this.service.login(
+        this.loginForm.get(['email'])!.value,
+        this.loginForm.get(['password'])!.value,
+        ).subscribe((response) => {
         console.log(response);
-      }
 
-      )
+
+      })
     }
 
 }

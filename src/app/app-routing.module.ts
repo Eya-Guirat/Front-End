@@ -4,19 +4,21 @@ import { CreateProjectComponent } from './working_hours/projects/create-project/
 import { EditProjectComponent } from './working_hours/projects/edit-project/edit-project.component';
 import { IndexProjectComponent } from './working_hours/projects/index-project/index-project.component';
 import { LoginComponent } from './auth/login/login.component';
+
 import { CreateTicketComponent } from './working_hours/tickets/create-ticket/create-ticket.component';
-
-
-
 
 
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
+  { path: "admin", loadChildren: () => import("./modules/admin/admin.module").then(m => m.AdminModule) },
+  { path: "employee", loadChildren: () => import("./modules/employee/employee.module").then(m => m.EmployeeModule) },
   { path: "create_project", component: CreateProjectComponent },
   { path: "edit_project", component: EditProjectComponent },
   { path: "index_project", component: IndexProjectComponent },
-  { path: "create_ticket", component: CreateTicketComponent },
+  { path: "create_ticket", component: CreateTicketComponent},
+
+
 ];
 
 @NgModule({
