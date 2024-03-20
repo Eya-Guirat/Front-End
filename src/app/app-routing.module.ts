@@ -19,15 +19,12 @@ const routes: Routes = [
   { path: "create_project", component: CreateProjectComponent },
   { path: "edit_project", component: EditProjectComponent },
   { path: "index_project", component: IndexProjectComponent },
-<<<<<<< Updated upstream
-  { path: "create_ticket", component: CreateTicketComponent},
 
 
-=======
   { path: "create_ticket", component: CreateTicketComponent },
   { path: "edit_ticket", component: EditTicketComponent },
   { path: "index_ticket", component: IndexTicketComponent },
->>>>>>> Stashed changes
+
 ];
 
 @NgModule({
