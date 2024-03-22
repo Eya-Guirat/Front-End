@@ -57,17 +57,11 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     CreateBoardComponent,
     EditBoardComponent,
     IndexBoardComponent,
-<<<<<<< HEAD
-
     CreateVacationComponent,
     EditVacationComponent,
     IndexVacationComponent,
 
-=======
-    CreateVacationComponent,
-    EditVacationComponent,
-    IndexVacationComponent,
->>>>>>> 19ab0e1851663771afa8eaa9fb589dd8c5eab6ea
+
 
   ],
   imports: [

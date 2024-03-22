@@ -38,7 +38,7 @@ export class StorageService {
 
   static isAdminLoggedIn(): boolean {
     if (this.getToken() == null){
-      return true;
+      return false;
     }
     const role: string = this.getUserRole();
     return role == "ADMIN";
@@ -46,10 +46,15 @@ export class StorageService {
 
   static isEmployeeLoggedIn(): boolean{
     if (this.getToken() == null){
-      return true;
+      return false;
     }
     const role: string = this.getUserRole();
     return role == "EMPLOYEE";
+  }
+
+  static logout(){
+    window.localStorage.removeItem(TOKEN);
+    window.localStorage.removeItem(USER);
   }
 
 
