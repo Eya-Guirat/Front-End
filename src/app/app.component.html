@@ -65,8 +65,19 @@
           <br>
 
           <li class="nav-item">
+            <a routerLink="/admin/add_employee" routerLinkActive="active" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Employees
+              </p>
+            </a>
+          </li>
+
+          <br>
+
+          <li class="nav-item">
             <a class="nav-link" (click)="logout()">
-              <i class="fa fa-sign-out-alt"></i>
+              <i class="nav-icon fa fa-sign-out-alt"></i>
               <p>
                 Logout
               </p>
@@ -177,7 +188,7 @@
 
           <li class="nav-item">
             <a class="nav-link" (click)="logout()">
-              <i class="fa fa-sign-out-alt"></i>
+              <i class="nav-icon fa fa-sign-out-alt"></i>
               <p>
                 Logout
               </p>

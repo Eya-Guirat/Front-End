@@ -12,12 +12,13 @@ import { CreateVacationComponent } from './vacation/create-vacation/create-vacat
 import { EditVacationComponent } from './vacation/edit-vacation/edit-vacation.component';
 import { IndexVacationComponent } from './vacation/index-vacation/index-vacation.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
+import { noAuthGuard } from './auth/guards/noAuth-guard/no-auth.guard';
 
 
 
 
 const routes: Routes = [
-  { path: "login", component: LoginComponent },
+  { path: "login", component: LoginComponent, canActivate: [noAuthGuard] },
   { path: "admin", loadChildren: () => import("./modules/admin/admin.module").then(m => m.AdminModule) },
   { path: "employee", loadChildren: () => import("./modules/employee/employee.module").then(m => m.EmployeeModule) },
   { path: "create_project", component: CreateProjectComponent },
