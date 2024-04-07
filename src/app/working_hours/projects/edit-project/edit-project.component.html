@@ -1,54 +1,42 @@
-<app-control-sidebar></app-control-sidebar>
-<app-main-header></app-main-header>
-<app-main-sidebar></app-main-sidebar>
-<app-main-footer></app-main-footer>
-<!-- Content Header (Page header) -->
 <div class="content-header">
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h2 class="m-0 text-dark">Projects </h2>
-      </div><!-- /.col -->
-    </div><!-- /.row -->
-  </div><!-- /.container-fluid -->
-</div>
+        <h2 class="m-0 text-dark">Projects</h2><br>
+        <div class="content">
 
-<!-- Main content -->
-<div class="content">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="card card-primary card-outline">
-          <div class="card-body">
+          <div class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="card card-primary card-outline">
+                  <div class="card-body">
+                    <h2>Edit Project</h2><br>
 
-            <h2>Edit Project</h2><br>
+                    <form [formGroup]="validateFrom">
+                      <div class="card-body">
 
-            <!-- form start -->
-            <form role="form" action="" method="POST">
+                        <div class="form-group">
+                          <label for="name">Ticket Name:</label>
+                          <input formControlName="name" type="text" class="form-control" id="name"
+                            placeholder="Enter Project's name">
+                            <span *ngIf="validateFrom.get('name').invalid && validateFrom.get('name').touched"
+                            class="text-danger">This input is required!</span>
+                        </div>
 
-              <div class="card-body">
-                <div class="form-group">
-                  <label for="nom">Name</label>
-                  <input type="text" class="form-control" id="nom" placeholder="Enter Project name" name="name"
-                    value="">
-
-                  <span class="text-danger"></span>
-
-
+                        <div class="card-footer">
+                          <button type="submit" class="btn btn-primary" [disabled]="validateFrom.invalid">Submit</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
-              <!-- /.card-body -->
-
-              <div class="card-footer">
-                <button type="submit" class="btn btn-primary"> Submit </button>
-              </div>
-            </form>
-
+            </div>
           </div>
-        </div><!-- /.card -->
+        </div>
       </div>
     </div>
-    <!-- /.row -->
-  </div><!-- /.container-fluid -->
+  </div>
 </div>
-<!-- /.content -->
+</div>

@@ -65,7 +65,7 @@
           <br>
 
           <li class="nav-item">
-            <a routerLink="/admin/add_employee" routerLinkActive="active" class="nav-link">
+            <a routerLink="/admin/all_employees" routerLinkActive="active" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Employees
@@ -117,7 +117,7 @@
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
 
         <div class="info">
-          <a href="#" class="d-block">Employee</a>
+          <a href="#" class="d-block">{{ employeeName }}</a>
         </div>
       </div>
 
@@ -141,7 +141,7 @@
           <br>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a class="nav-link">
               <i class="nav-icon fas fa-columns"></i>
               <p>
                 Working Hours
@@ -155,6 +155,7 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p>Board</p>
                 </a>
+              </li>
 
               <li class="nav-item">
                 <a routerLink="/tickets" routerLinkActive="active" class="nav-link">
@@ -164,7 +165,7 @@
               </li>
 
               <li class="nav-item">
-                <a routerLink="/index_project" routerLinkActive="active" class="nav-link">
+                <a routerLink="/employee/create_project" routerLinkActive="active" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Project</p>
                 </a>
@@ -176,7 +177,7 @@
           <br>
 
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a  class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 Vacation

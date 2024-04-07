@@ -42,6 +42,22 @@ export class StorageService {
     return user.role;
   }
 
+  static getUserId(){
+    const user = this.getUser();
+    if (user == null) return '';
+    return user.userId;
+  }
+
+
+  public saveEmployeeName(name: string) {
+    window.localStorage.setItem('employeeName', name);
+    console.log('Stored employee name:', name);
+  }
+
+  static getEmployeeName(): string {
+    return window.localStorage.getItem('employeeName');
+  }
+
 
   static isAdminLoggedIn(): boolean {
     if (this.getToken() == null){

@@ -1,71 +1,68 @@
-<app-control-sidebar></app-control-sidebar>
-<app-main-header></app-main-header>
-<app-main-sidebar></app-main-sidebar>
-<app-main-footer></app-main-footer>
-<!-- Content Header (Page header) -->
 <div class="content-header">
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h2 class="m-0 text-dark">Tickets </h2>
-      </div><!-- /.col -->
-    </div><!-- /.row -->
-  </div><!-- /.container-fluid -->
-</div>
+        <h2 class="m-0 text-dark">Tickets</h2><br>
+        <div class="content">
 
-<!-- Main content -->
-<div class="content">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="card card-primary card-outline">
-          <div class="card-body">
+          <div class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="card card-primary card-outline">
+                  <div class="card-body">
+                    <h2>Edit Ticket</h2><br>
 
-            <h2>Edit Ticket</h2><br>
+                    <form [formGroup]="validateFrom">
+                      <div class="card-body">
 
-            <!-- form start -->
-            <form role="form" action="#" method="POST">
+                        <div class="form-group">
+                          <label for="name">Ticket Name:</label>
+                          <input formControlName="name" type="text" class="form-control" id="name"
+                            placeholder="Enter Ticket's name">
+                            <span *ngIf="validateFrom.get('name').invalid && validateFrom.get('name').touched"
+                            class="text-danger">This input is required!</span>
+                        </div>
 
-              <div class="card-body">
-                <div class="form-group">
-                  <label for="nom">Ticket Name :</label><br>
-                  <input type="text" class="form-control" id="nom" placeholder="Enter ticket name" name="name">
-                  <span class="text-danger"></span>
-                </div>
+                        <div class="form-group">
+                          <label class="tk" for="gender">Project :</label>
+                          <select formControlName="project" id="project" class="form-control">
+                            <option *ngFor="let project of PROJECT" [value]="project">{{ project }}</option>
+                          </select>
+                          <span *ngIf="validateFrom.get('project').invalid && validateFrom.get('project').touched"
+                            class="text-danger">This input is required!</span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="name">Project Duration (Hours):</label>
+                          <input formControlName="duration" type="number" class="form-control" id="duration"
+                            placeholder="Enter Ticket's project duration">
+                            <span *ngIf="validateFrom.get('duration').invalid && validateFrom.get('duration').touched"
+                            class="text-danger">This input is required!</span>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="tp" for="dateOfBirth">Date:</label>
+                          <input formControlName="date" type="date" id="date" class="form-control">
+                          <span *ngIf="validateFrom.get('date').invalid && validateFrom.get('date').touched"
+                            class="text-danger">This input is required!</span>
+                        </div>
 
 
 
-                <label for="nom">Existing Ticket:</label>
-                <select id="projet-selection" name="projet-selection" class="form-control">
-                  <option value="">Choose a ticket</option>
-                  <option value="projet-a">ticket A</option>
-                  <option value="projet-b">ticket B</option>
-                  <option value="projet-c">ticket C</option>
-                </select>
-
-
-
-                <div class="form-group">
-                  <label class="tk" for="duree-projet">Project Duration (Hours) :</label>
-                  <input type="number" id="duree-projet" name="duree-projet" placeholder="ticket duration"
-                    class="form-control" required>
-                </div>
-
-
-                <label class="tp" for="duree-projet">Date :</label>
-                <input type="date" id="duree-projet" name="duree-projet" class="form-control" required><br>
-
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary"> Submit </button>
+                        <div class="card-footer">
+                          <button type="submit" class="btn btn-primary" [disabled]="validateFrom.invalid">Submit</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
-            </form>
-
+            </div>
           </div>
-        </div><!-- /.card -->
+        </div>
       </div>
     </div>
-    <!-- /.row -->
-  </div><!-- /.container-fluid -->
+  </div>
 </div>
-<!-- /.content -->
+</div>

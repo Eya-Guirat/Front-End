@@ -1,45 +1,29 @@
-.sidebar {
-  float: left;
-  /* Make the sidebar float to the left */
-  width: 200px;
-  /* Set the sidebar's width */
+
+
+h1 {
+  text-align: center;
 }
 
-/* Target the table element */
-.content-header  {
-  margin-left: 292px;
-  /* Adjust the margin to position behind the sidebar */
-  /* Other table styling can be added here */
+
+label {
+  display: block;
+  margin-bottom: 10px;
+
 }
 
-.content {
-  margin-left: 300px;
+
+select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-.row {
-  width: 2000px;
-  height: 50px;
-}
+
 
 h2.m-0 {
   font-size: 40px;
+
 }
 
-h2 {
-  font-size: 25px;
-  height: 20px;
-}
 
-.card-footer {
-  background-color: transparent;
-  height: 70px;
-}
-
-label {
-  height: 35px;
-  font-size: 16px;
-}
-
-nav.main-header.navbar-expand.navbar-white.navbar-light {
-  margin-right: 50px;
-}

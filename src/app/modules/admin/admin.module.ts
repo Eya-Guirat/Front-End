@@ -9,12 +9,16 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
-
+import { AllEmployeesComponent } from './admin-components/all-employees/all-employees.component';
+import { UpdateEmployeeComponent } from './admin-components/update-employee/update-employee.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    PostEmployeeComponent
+    PostEmployeeComponent,
+    UpdateEmployeeComponent,
+    AllEmployeesComponent
   ],
   imports: [
     CommonModule,
@@ -24,6 +28,7 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatFormFieldModule,
     MatSelectModule,
     MatDatepickerModule,
+    MatCardModule,
     MatNativeDateModule,
     AdminRoutingModule
   ]

@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { StorageService } from 'src/app/auth/services/storage/storage.service';
 
 const BASIC_URL = ["http://localhost:8080/"];
@@ -12,8 +13,40 @@ export class AdminService {
 
   constructor(private http: HttpClient) { }
 
-  addEmployee(employeeDto: any){
+  addEmployee(employeeDto: any): Observable<any>{
+    console.log(this.createAuthorizationHeader());
     return this.http.post<[]>(BASIC_URL + "api/admin/employee", employeeDto,{
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
+  getAllEmployee(): Observable<any>{
+    return this.http.get<[]>(BASIC_URL + "api/admin/employees",
+    {
+      headers: this.createAuthorizationHeader()
+    }
+    )
+  }
+
+  deleteEmployee(employeeId: any): Observable<any>{
+    return this.http.delete<[]>(BASIC_URL + `api/admin/employee/${employeeId}`,
+    {
+      headers: this.createAuthorizationHeader()
+    }
+    )
+  }
+
+  getEmployeeById(employeeId: number): Observable<any>{
+    return this.http.get<[]>(BASIC_URL +`api/admin/employee/${employeeId}`,
+    {
+      headers: this.createAuthorizationHeader()
+    }
+    )
+  }
+
+  updateEmployee(employeeId: number,employeeDto: any): Observable<any>{
+    console.log(this.createAuthorizationHeader());
+    return this.http.put<[]>(BASIC_URL + `api/admin/employee/${employeeId}`, employeeDto, {
       headers: this.createAuthorizationHeader(),
     });
   }

@@ -12,6 +12,7 @@ export class AppComponent {
 
   isAdminLoggedIn : boolean;
   isEmployeeLoggedIn : boolean;
+  employeeName: string;
 
   constructor(
     private router:Router
@@ -21,6 +22,8 @@ export class AppComponent {
     this.updateUserLoggedStatus();
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
+        this.employeeName = StorageService.getEmployeeName();
+        console.log('Retrieved employee name:', this.employeeName);
         this.updateUserLoggedStatus();
       }
     })

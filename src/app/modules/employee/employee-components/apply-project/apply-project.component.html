@@ -17,7 +17,7 @@
                       <div class="card-body">
 
                         <div class="form-group">
-                          <label for="name">Ticket Name:</label>
+                          <label for="name">Project Name:</label>
                           <input formControlName="name" type="text" class="form-control" id="name"
                             placeholder="Enter Project's name">
                             <span *ngIf="validateFrom.get('name').invalid && validateFrom.get('name').touched"
@@ -25,7 +25,7 @@
                         </div>
 
                         <div class="card-footer">
-                          <button type="submit" class="btn btn-primary" [disabled]="validateFrom.invalid">Submit</button>
+                          <button type="submit" class="btn btn-primary" [disabled]="validateFrom.invalid" (click)="applyProject()">Submit</button>
                         </div>
                       </div>
                     </form>

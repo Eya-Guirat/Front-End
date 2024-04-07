@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AdminService } from '../../admin-service/admin.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-post-employee',
@@ -27,14 +29,16 @@ export class PostEmployeeComponent {
 
   constructor(
     private service:AdminService,
-    private fb:FormBuilder
+    private fb:FormBuilder,
+    private snackBar: MatSnackBar,
+    private router : Router,
   ){ }
 
   ngOnInit(): void {
     this.validateFrom = this.fb.group({
       email:['',Validators.required],
       password:['',Validators.required],
-      checkPassword:['',Validators.required],
+      checkPassword:['',Validators.required, this.confirmationValidator],
       name:['',Validators.required],
       gender:['',Validators.required],
       dob:['',Validators.required],
@@ -45,6 +49,13 @@ export class PostEmployeeComponent {
     console.log(this.validateFrom.value);
     this.service.addEmployee(this.validateFrom.value).subscribe((res) => {
       console.log(res);
+      if (res.id != null){
+        this.snackBar.open('Employee submitted successfully', 'Close', {duration: 50000});
+        this.router.navigateByUrl('admin/all_employees');
+      } else {
+        this.snackBar.open("Something went wrong", "Close", {duration: 5000});
+      }
+
     }
     )
   }

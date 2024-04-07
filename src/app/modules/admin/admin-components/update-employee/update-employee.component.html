@@ -11,7 +11,7 @@
               <div class="col-lg-12">
                 <div class="card card-primary card-outline">
                   <div class="card-body">
-                    <h2>Create Employee</h2><br>
+                    <h2>Edit Employee</h2><br>
 
                     <form [formGroup]="validateFrom">
                       <div class="card-body">
@@ -23,28 +23,23 @@
                             <span *ngIf="validateFrom.get('email').invalid && validateFrom.get('email').touched" class="text-danger">
                               <span *ngIf="validateFrom.get('email').hasError('required')" class="text-danger">This input is required! </span>
                               <span *ngIf="validateFrom.get('email').hasError('email')" class="text-danger">Please enter a valid email address.</span>
-                          </span>
+                          </span><br>
 
 
+                          <div class="form-group">
+                            <label class="tk" for="password">Password :</label>
+                            <input formControlName="password" type="password" id="password" placeholder="Enter Password"
+                              class="form-control">
+                          </div>
+
+                          <div class="form-group">
+                            <label class="tk" for="checkPassword">Confirm Password :</label>
+                            <input formControlName="checkPassword" type="password" id="checkPassword"
+                              placeholder="Confirm Password" class="form-control">
+
+                          </div>
 
                         </div>
-
-                        <div class="form-group">
-                          <label class="tk" for="password">Password :</label>
-                          <input formControlName="password" type="password" id="password" placeholder="Enter Password"
-                            class="form-control">
-                            <span *ngIf="validateFrom.get('password').invalid && validateFrom.get('password').touched"
-                            class="text-danger">This input is required!</span>
-                        </div>
-
-                        <div class="form-group">
-                          <label class="tk" for="checkPassword">Confirm Password :</label>
-                          <input formControlName="checkPassword" type="password" id="checkPassword"
-                            placeholder="Confirm Password" class="form-control">
-                            <span *ngIf="validateFrom.get('checkPassword').invalid && validateFrom.get('checkPassword').touched"
-                            class="text-danger">This input is required!</span>
-                        </div>
-
                         <div class="form-group">
                           <label for="name">Full Name :</label>
                           <input formControlName="name" type="text" class="form-control" id="name"
@@ -70,7 +65,7 @@
                         </div>
 
                         <div class="card-footer">
-                          <button type="submit" class="btn btn-primary" [disabled]="validateFrom.invalid" (click)="postEmployee()">Submit</button>
+                          <button type="submit" class="btn btn-primary" [disabled]="validateFrom.invalid" (click)="updateEmployee()">Submit</button>
                         </div>
                       </div>
                     </form>
