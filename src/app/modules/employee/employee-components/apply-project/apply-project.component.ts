@@ -22,13 +22,14 @@ export class ApplyProjectComponent {
 
   ngOnInit(): void {
     this.validateFrom = this.fb.group({
-      name:['',Validators.required],
-    })
+      name:[null ,[Validators.required]],
+    });
   }
 
   applyProject(){
     console.log(this.validateFrom.value);
     this.employeeService.applyProject(this.validateFrom.value).subscribe(
+
       (res) => {
         console.log(res);
         if (res.id != null){

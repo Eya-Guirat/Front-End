@@ -22,6 +22,7 @@ export class EmployeeService {
 
   applyProject(projectDto): Observable<any>{
     projectDto.userId = StorageService.getUserId();
+    console.log(projectDto);
     return this.http.post<[]>(BASIC_URL +`api/employee/project`, projectDto,
     {
       headers: this.createAuthorizationHeader()
