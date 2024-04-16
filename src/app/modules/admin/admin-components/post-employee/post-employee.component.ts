@@ -50,10 +50,10 @@ export class PostEmployeeComponent {
     this.service.addEmployee(this.validateFrom.value).subscribe((res) => {
       console.log(res);
       if (res.id != null){
-        this.snackBar.open('Employee submitted successfully', 'Close', {duration: 50000});
+        this.snackBar.open('Employee submitted successfully', 'Close', {duration: 500});
         this.router.navigateByUrl('admin/all_employees');
       } else {
-        this.snackBar.open("Something went wrong", "Close", {duration: 5000});
+        this.snackBar.open("Something went wrong", "Close", {duration: 500});
       }
 
     }

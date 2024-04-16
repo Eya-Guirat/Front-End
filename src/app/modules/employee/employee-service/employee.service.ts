@@ -55,6 +55,13 @@ export class EmployeeService {
     )
   }
 
+  updateProject(projectId: number,projectDto: any): Observable<any>{
+    console.log(this.createAuthorizationHeader());
+    return this.http.put<[]>(BASIC_URL + `api/employee/project/${projectId}`, projectDto, {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
 
   createAuthorizationHeader(): HttpHeaders {
     let authHeaders : HttpHeaders = new HttpHeaders();

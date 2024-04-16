@@ -3,7 +3,7 @@
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h2 class="m-0 text-dark">Employees</h2>
+        <h2 class="m-0 text-dark">Employees</h2><br>
       </div><!-- /.content -->
     </div><!-- /.col -->
     </div><!-- /.row -->
@@ -16,8 +16,8 @@
       <div class="col-lg-12">
         <div class="card card-primary card-outline">
           <div class="card-body">
-            <h2>List of Employees</h2>
-            <a routerLink="/admin/add_employee"  class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Add Employee</a>
+            <h2>List of Employees</h2><br>
+            <a routerLink="/admin/add_employee"  class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Add Employee</a><br><br>
             <table class="table table-bordered">
               <thead>
                 <tr>
@@ -38,7 +38,7 @@
                   <td>{{ employee.dob | date: 'd,MMM,y' }}</td>
 
                   <td>
-                    <a style='margin-right:16px' class="btn btn-sm btn-info fas fa-edit" routerLink="/admin/add_employee/{{employee.id}}">Edit</a>
+                    <a style='margin-right:16px' class="btn btn-sm btn-info" routerLink="/admin/add_employee/{{employee.id}}"><i class="fas fa-edit"></i>Edit</a>
                     <a style='margin-right:16px' class="btn btn-sm btn-danger alert-delete" (click)="deleteEmployee(employee.id)">Delete</a>
                     <form id="" method="POST">
                     </form>

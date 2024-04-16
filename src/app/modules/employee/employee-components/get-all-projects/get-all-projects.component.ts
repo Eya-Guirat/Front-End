@@ -30,7 +30,7 @@ export class GetAllProjectsComponent {
       this.service.deleteProject(projectId).subscribe((res) => {
         console.log(res);
         this.getAllProjects();
-        this.snackBar.open("Project deleted successfully", "Close", { duration: 5000 });
+        this.snackBar.open("Project deleted successfully", "Close", { duration: 500 });
       })
     }
 

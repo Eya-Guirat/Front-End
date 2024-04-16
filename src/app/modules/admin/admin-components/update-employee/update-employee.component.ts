@@ -62,10 +62,10 @@ export class UpdateEmployeeComponent {
         (res) => {
           console.log(res);
           if (res.id != null){
-            this.snackBar.open('Employee edited successfully', 'Close', {duration: 50000});
+            this.snackBar.open('Employee edited successfully', 'Close', {duration: 500});
             this.router.navigateByUrl('admin/all_employees');
           } else {
-            this.snackBar.open("Something went wrong", "Close", {duration: 5000});
+            this.snackBar.open("Something went wrong", "Close", {duration: 500});
           }
         }
       )

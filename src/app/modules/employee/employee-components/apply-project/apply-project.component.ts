@@ -33,10 +33,10 @@ export class ApplyProjectComponent {
       (res) => {
         console.log(res);
         if (res.id != null){
-          this.snackBar.open('Project submitted successfully', 'SUCCESS', {duration: 50000});
+          this.snackBar.open('Project submitted successfully', 'SUCCESS', {duration: 500});
           this.router.navigateByUrl('employee/all_projects');
         } else {
-          this.snackBar.open("Something went wrong", "ERROR", {duration: 5000});
+          this.snackBar.open("Something went wrong", "ERROR", {duration: 500});
         }
       },
     );

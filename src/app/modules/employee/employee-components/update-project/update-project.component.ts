@@ -36,5 +36,16 @@ export class UpdateProjectComponent {
       })
     }
 
+    updateProject() {
+      this.service.updateProject(this.projectId, this.validateFrom.value).subscribe((res) => {
+        console.log(res);
+        if (res.id != null){
+          this.snackBar.open('Project edited successfully', 'Close', {duration: 500});
+          this.router.navigateByUrl('employee/all_projects');
+        } else {
+          this.snackBar.open("Something went wrong", "Close", {duration: 500});
+        }
+      })
+    }
 
 }

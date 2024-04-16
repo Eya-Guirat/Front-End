@@ -3,7 +3,7 @@
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h2 class="m-0 text-dark">Projects</h2>
+        <h2 class="m-0 text-dark">Projects</h2><br>
       </div><!-- /.content -->
     </div><!-- /.col -->
     </div><!-- /.row -->
@@ -16,8 +16,8 @@
       <div class="col-sm-6">
         <div class="card card-primary card-outline">
           <div class="card-body">
-            <h2>List of Projects</h2>
-            <a routerLink="/employee/create_project"  class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Add Project</a>
+            <h2>List of Projects</h2><br>
+            <a routerLink="/employee/create_project"  class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Add Project</a><br><br>
             <table class="table table-bordered">
               <thead>
                 <tr>
@@ -31,7 +31,7 @@
                   <td>{{ i + 1 }}</td>
                   <td>{{ project.name }}</td>
                   <td>
-                    <a style='margin-right:16px' class="btn btn-sm btn-info fas fa-edit" [routerLink]="['/employee/create_project', project.id]" >Edit</a>
+                    <a style='margin-right:16px' class="btn btn-sm btn-info" [routerLink]="['/employee/create_project', project.id]"><i class="fas fa-edit"></i>Edit</a>
                     <a style='margin-right:16px' class="btn btn-sm btn-danger alert-delete" (click)="deleteProject(project.id)">Delete</a>
 
                     <form id="" method="POST">
