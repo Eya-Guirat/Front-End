@@ -31,6 +31,30 @@ export class EmployeeService {
     )
   }
 
+  getAllProjects(): Observable<any> {
+    return this.http.get<[]>(BASIC_URL + "api/employee/projects",
+      {
+        headers: this.createAuthorizationHeader()
+      }
+    );
+  }
+
+  deleteProject(projectId: any): Observable<any>{
+    return this.http.delete<[]>(BASIC_URL + `api/employee/project/${projectId}`,
+    {
+      headers: this.createAuthorizationHeader()
+    }
+    )
+  }
+
+  getProjectById(projectId: number): Observable<any>{
+    return this.http.get<[]>(BASIC_URL +`api/employee/project/${projectId}`,
+    {
+      headers: this.createAuthorizationHeader()
+    }
+    )
+  }
+
 
   createAuthorizationHeader(): HttpHeaders {
     let authHeaders : HttpHeaders = new HttpHeaders();
@@ -38,5 +62,6 @@ export class EmployeeService {
       'Authorization', "Bearer " + StorageService.getToken()
     );
   }
+
 
 }

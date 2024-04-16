@@ -34,6 +34,7 @@ export class ApplyProjectComponent {
         console.log(res);
         if (res.id != null){
           this.snackBar.open('Project submitted successfully', 'SUCCESS', {duration: 50000});
+          this.router.navigateByUrl('employee/all_projects');
         } else {
           this.snackBar.open("Something went wrong", "ERROR", {duration: 5000});
         }

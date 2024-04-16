@@ -65,7 +65,8 @@
                         </div>
 
                         <div class="card-footer">
-                          <button type="submit" class="btn btn-primary" [disabled]="validateFrom.invalid" (click)="updateEmployee()">Submit</button>
+                          <button style='margin-right:16px' type="submit" class="btn btn-primary" [disabled]="validateFrom.invalid" (click)="updateEmployee()">Submit</button>
+                          <button style='margin-right:16px' class="btn btn-danger" routerLink="/admin/all_employees">Cancel</button>
                         </div>
                       </div>
                     </form>
