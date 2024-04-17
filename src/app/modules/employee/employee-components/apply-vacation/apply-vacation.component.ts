@@ -32,4 +32,18 @@ export class ApplyVacationComponent {
       })
     }
 
+    applyVacation() {
+      console.log(this.validateFrom.value);
+      this.service.applyVacation(this.validateFrom.value).subscribe(
+        (res) => {
+          console.log(res);
+          if(res.id != null) {
+            this.snackBar.open('Vacation submitted successfully', 'Close', {duration: 500});
+          } else {
+            this.snackBar.open('Something went wrong', 'Close', {duration: 500});
+          }
+        }
+      )
+    }
+
 }
