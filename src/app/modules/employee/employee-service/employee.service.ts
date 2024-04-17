@@ -62,6 +62,15 @@ export class EmployeeService {
     });
   }
 
+  applyVacation(vacationDto): Observable<any>{
+    vacationDto.userId = StorageService.getUserId();
+    return this.http.post<[]>(BASIC_URL +`api/employee/vacation`, vacationDto,
+    {
+      headers: this.createAuthorizationHeader()
+    }
+    )
+  }
+
 
   createAuthorizationHeader(): HttpHeaders {
     let authHeaders : HttpHeaders = new HttpHeaders();

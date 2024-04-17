@@ -7,6 +7,7 @@ import { DashboardComponent } from './employee-components/dashboard/dashboard.co
 import { ApplyProjectComponent } from './employee-components/apply-project/apply-project.component';
 import { GetAllProjectsComponent } from './employee-components/get-all-projects/get-all-projects.component';
 import { UpdateProjectComponent } from './employee-components/update-project/update-project.component';
+import { ApplyVacationComponent } from './employee-components/apply-vacation/apply-vacation.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { UpdateProjectComponent } from './employee-components/update-project/upd
     DashboardComponent,
     ApplyProjectComponent,
     GetAllProjectsComponent,
-    UpdateProjectComponent
+    UpdateProjectComponent,
+    ApplyVacationComponent
   ],
   imports: [
     CommonModule,
