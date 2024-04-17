@@ -12,13 +12,15 @@ import {MatNativeDateModule} from '@angular/material/core';
 import { AllEmployeesComponent } from './admin-components/all-employees/all-employees.component';
 import { UpdateEmployeeComponent } from './admin-components/update-employee/update-employee.component';
 import {MatCardModule} from '@angular/material/card';
+import { AllVacationsComponent } from './admin-components/all-vacations/all-vacations.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     PostEmployeeComponent,
     UpdateEmployeeComponent,
-    AllEmployeesComponent
+    AllEmployeesComponent,
+    AllVacationsComponent
   ],
   imports: [
     CommonModule,

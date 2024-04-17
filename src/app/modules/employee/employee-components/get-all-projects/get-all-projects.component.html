@@ -31,8 +31,8 @@
                   <td>{{ i + 1 }}</td>
                   <td>{{ project.name }}</td>
                   <td>
-                    <a style='margin-right:16px' class="btn btn-sm btn-info" [routerLink]="['/employee/create_project', project.id]"><i class="fas fa-edit"></i>Edit</a>
-                    <a style='margin-right:16px' class="btn btn-sm btn-danger alert-delete" (click)="deleteProject(project.id)">Delete</a>
+                    <a style='margin-right:16px' class="btn btn-sm btn-info" [routerLink]="['/employee/create_project', project.id]"><i class="fas fa-pencil-alt"></i>Edit</a>
+                    <a style='margin-right:16px' class="btn btn-sm btn-danger alert-delete" (click)="deleteProject(project.id)"><i class="fas fa-trash"></i>Delete</a>
 
                     <form id="" method="POST">
                     </form>

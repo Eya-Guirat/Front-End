@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { EmployeeService } from '../../employee-service/employee.service';
 
 @Component({
   selector: 'app-get-all-vacations',
@@ -6,5 +8,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./get-all-vacations.component.css']
 })
 export class GetAllVacationsComponent {
+
+  vacations: any;
+
+  constructor(private service: EmployeeService,
+    private snackBar: MatSnackBar ){ }
+
+    ngOnInit(): void{
+      this.getAllVacations();
+    }
+
+    getAllVacations(){
+      this.service.getAllAppliedVacationsByEmployeeId().subscribe((res) =>{
+        console.log(res);
+        this.vacations = res;
+      })
+    }
 
 }
