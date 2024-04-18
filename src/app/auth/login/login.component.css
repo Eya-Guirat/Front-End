@@ -42,3 +42,23 @@ button{
     max-width: 100%;
   }
 }
+
+.text-danger {
+  margin-top: -10px; /* Adjust this value as needed */
+}
+
+.col-4 {
+  Text-align: center;
+}
+
+.btn-block {
+  Text-align: center;
+}
+
+.login-box .card,
+.register-box .card {
+  width: 400px; /* Adjust width as needed */
+  height: 400px; /* Adjust height as needed */
+  padding: 20px; /* Adjust padding as needed */
+   /* Adjust font size as needed */
+}
