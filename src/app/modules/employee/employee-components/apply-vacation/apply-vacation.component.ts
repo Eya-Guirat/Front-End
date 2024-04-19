@@ -39,6 +39,7 @@ export class ApplyVacationComponent {
           console.log(res);
           if(res.id != null) {
             this.snackBar.open('Vacation submitted successfully', 'Close', {duration: 500});
+            this.router.navigateByUrl('employee/all_vacations');
           } else {
             this.snackBar.open('Something went wrong', 'Close', {duration: 500});
           }
