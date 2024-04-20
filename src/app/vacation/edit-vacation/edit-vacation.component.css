@@ -40,9 +40,7 @@ select {
 }
 
 
-.content {
-  margin-left: 300px;
-}
+
 
 .row {
   width: 2000px;
@@ -50,7 +48,7 @@ select {
 
 h2.m-0 {
   font-size: 40px;
-  text-align: center;
+
 }
 
 .t {

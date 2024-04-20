@@ -3,7 +3,7 @@
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h2 class="m-0 text-dark">Tickets </h2>
+        <h2 class="m-0 text-dark"> Employees </h2>
       </div><!-- /.col -->
     </div><!-- /.row -->
   </div><!-- /.container-fluid -->
@@ -17,38 +17,40 @@
         <div class="card card-primary card-outline">
           <div class="card-body">
 
-            <h2>Edit Ticket</h2><br>
+            <h2>Edit Employee</h2><br>
 
             <!-- form start -->
             <form role="form" action="#" method="POST">
 
               <div class="card-body">
                 <div class="form-group">
-                  <label for="nom">Ticket Name :</label><br>
-                  <input type="text" class="form-control" id="nom" placeholder="Enter ticket name" name="name">
+                  <label for="nom">Employee's Name :</label><br>
+                  <input type="text" class="form-control" id="nom" placeholder="Enter Employee's name" name="name">
                   <span class="text-danger"></span>
                 </div>
 
-
-
-                <label for="nom">Existing Ticket:</label>
-                <select id="projet-selection" name="projet-selection" class="form-control">
-                  <option value="">Choose a ticket</option>
-                  <option value="projet-a">ticket A</option>
-                  <option value="projet-b">ticket B</option>
-                  <option value="projet-c">ticket C</option>
-                </select>
-
-
-
                 <div class="form-group">
-                  <label class="tk" for="duree-projet">Project Duration (Hours) :</label>
-                  <input type="number" id="duree-projet" name="duree-projet" placeholder="ticket duration"
+                  <label class="tk" for="duree-projet">Password :</label>
+                  <input type="number" id="duree-projet" name="duree-projet" placeholder="Enter Password"
                     class="form-control" required>
                 </div>
 
 
-                <label class="tp" for="duree-projet">Date :</label>
+
+                <div class="form-group">
+                  <label class="tk" for="duree-projet">Email :</label>
+                  <input type="number" id="duree-projet" name="duree-projet" placeholder="Enter Email"
+                    class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="tk" for="duree-projet">Gender :</label>
+                  <input type="number" id="duree-projet" name="duree-projet" placeholder="Enter Gender"
+                    class="form-control" required>
+                </div>
+
+
+                <label class="tp" for="duree-projet">Birth day :</label>
                 <input type="date" id="duree-projet" name="duree-projet" class="form-control" required><br>
 
                 <div class="card-footer">

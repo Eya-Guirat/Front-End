@@ -1,26 +1,3 @@
-.sidebar {
-  float: left;
-  /* Make the sidebar float to the left */
-  width: 200px;
-  /* Set the sidebar's width */
-}
-
-/* Target the table element */
-.content-header {
-  margin-left: 292px;
-
-}
-
-.content {
-  margin-left: 300px;
-}
-
-.row {
-  width: 2990px;
-  height: 50px;
-  line-height: 50px;
-}
-
 h2.m-0 {
   font-size: 40px;
 }
@@ -28,34 +5,4 @@ h2.m-0 {
 h2 {
   font-size: 25px;
   height: 20px;
-}
-
-.card-footer {
-  background-color: transparent;
-  height: 70px;
-}
-
-
-.btn.btn-sm.btn-info {
-  background-color: rgb(7, 187, 7);
-  margin-right: 5px;
-
-}
-
-.btn.btn-sm.btn-danger.alert-delete {
-  background-color: rgb(216, 7, 7);
-
-}
-
-
-.card.card-primary.card-outline {
-  width: 1150px;
-}
-
-.tf {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-
 }

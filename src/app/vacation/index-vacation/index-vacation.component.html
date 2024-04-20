@@ -1,7 +1,3 @@
-<app-control-sidebar></app-control-sidebar>
-<app-main-header></app-main-header>
-<app-main-sidebar></app-main-sidebar>
-<app-main-footer></app-main-footer>
 <!-- Content Header (Page header) -->
 <div class="content-header">
   <div class="container-fluid">
@@ -17,43 +13,39 @@
 <div class="content">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-8">
+      <div class="col-lg-12">
         <div class="card card-primary card-outline">
           <div class="card-body">
-
-            <h2>List of Vacations</h2><br><br>
-
-            <a routerLink="/create_project" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i>Add Vacation</a>
-
-            <table class="table table-borderd ">
+            <h2>List of Vacations</h2>
+            <a href="#" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Add Vacation</a>
+            <table class="table table-bordered">
               <thead>
                 <tr>
                   <th>#</th>
-                  <th class="tl">Name</th>
-                  <th class="tt">Action</th>
+                  <th>Vacation Type</th>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
-
-
                 <tr>
                   <td></td>
                   <td></td>
-                  <td class="tf">
-                    <a routerLink="/edit_project" class="btn btn-sm btn-info"> Edit</a>
-                    <a href="javascript:;" class="btn btn-sm btn-danger alert-delete" data-form-id="">Delete</a>
-
-                    <form id="" action="" method="POST"></form>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <a href="#" class="btn btn-sm btn-info">Edit</a>
+                    <a href="javascript:;" class="btn btn-sm btn-danger alert-delete">Delete</a>
+                    <form id="" method="POST">
+                    </form>
                   </td>
                 </tr>
-
               </tbody>
             </table>
-          </div>
+          </div><!-- /.card-body -->
         </div><!-- /.card -->
-      </div>
-    </div>
-    <!-- /.row -->
+      </div><!-- /.col-lg-12 -->
+    </div><!-- /.row -->
   </div><!-- /.container-fluid -->
-</div>
-<!-- /.content -->
+</div><!-- /.content -->
