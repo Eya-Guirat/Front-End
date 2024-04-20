@@ -3,14 +3,36 @@
   height: 50px;
 }
 
-h2.m-0 {
-  font-size: 40px;
+
+
+h1 {
+  text-align: center;
 }
 
-h2 {
-  font-size: 25px;
-  height: 20px;
+
+label {
+  display: block;
+  margin-bottom: 10px;
+
 }
+
+
+select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+
+
+
+h2.m-0 {
+  font-size: 40px;
+
+}
+
+
 
 .card-footer {
   background-color: transparent;

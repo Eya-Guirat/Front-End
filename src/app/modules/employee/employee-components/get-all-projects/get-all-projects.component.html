@@ -1,0 +1,51 @@
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h2 class="m-0 text-dark">Projects</h2><br>
+      </div><!-- /.content -->
+    </div><!-- /.col -->
+    </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+
+<!-- Main content -->
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card card-primary card-outline">
+          <div class="card-body">
+            <h2>List of Projects</h2><br>
+            <a routerLink="/employee/create_project"  class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Add Project</a><br><br>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th class="tl">Name </th>
+                  <th class="">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let project of projects; let i = index">
+                  <td>{{ i + 1 }}</td>
+                  <td>{{ project.name }}</td>
+                  <td>
+                    <a style='margin-right:16px' class="btn btn-sm btn-info" [routerLink]="['/employee/create_project', project.id]"><i class="fas fa-pencil-alt"></i>Edit</a>
+                    <a style='margin-right:16px' class="btn btn-sm btn-danger alert-delete" (click)="deleteProject(project.id)"><i class="fas fa-trash"></i>Delete</a>
+
+                    <form id="" method="POST">
+                    </form>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- /.card-body -->
+        </div><!-- /.card -->
+      </div><!-- /.col-lg-12 -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+
+
+
+

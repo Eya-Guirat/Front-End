@@ -1,18 +1,7 @@
-body {
-  font-family: sans-serif;
-}
-
 h1 {
   text-align: center;
 }
 
-form {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
 
 label {
   display: block;
@@ -20,13 +9,6 @@ label {
 
 }
 
-input[type="text"],
-input[type="number"] {
-  width: 100%;
-  padding: 5px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
 
 select {
   width: 100%;
@@ -35,9 +17,7 @@ select {
   border-radius: 5px;
 }
 
-.card-footer {
-  background-color: transparent;
-}
+
 
 
 
@@ -45,19 +25,8 @@ select {
   width: 2000px;
 }
 
+
 h2.m-0 {
   font-size: 40px;
 
-}
-
-.t {
-  padding-top: 40px;
-}
-
-.tk {
-  padding-top: 40px;
-}
-
-.tp {
-  padding-top: 20px;
 }

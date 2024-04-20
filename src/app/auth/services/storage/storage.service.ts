@@ -27,12 +27,35 @@ export class StorageService {
     return JSON.parse(localStorage.getItem(USER))
   }
 
+  static hasToken(): boolean {
+    if(this.getToken() === null){
+      return false;
+    }
+    return true;
+  }
+
   static getUserRole():string{
     const user = this.getUser();
     if (user == null) {
       return '';
     }
     return user.role;
+  }
+
+  static getUserId(){
+    const user = this.getUser();
+    if (user == null) return '';
+    return user.userId;
+  }
+
+
+  public saveEmployeeName(name: string) {
+    window.localStorage.setItem('employeeName', name);
+    console.log('Stored employee name:', name);
+  }
+
+  static getEmployeeName(): string {
+    return window.localStorage.getItem('employeeName');
   }
 
 

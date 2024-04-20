@@ -3,11 +3,11 @@
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h2 class="m-0 text-dark">Tickets</h2>
-      </div><!-- /.col -->
-    </div><!-- /.row -->
-  </div><!-- /.container-fluid -->
-</div>
+        <h2 class="m-0 text-dark">Employees</h2>
+      </div><!-- /.content -->
+    </div><!-- /.col -->
+  </div><!-- /.row -->
+</div><!-- /.container-fluid -->
 
 <!-- Main content -->
 <div class="content">
@@ -16,20 +16,27 @@
       <div class="col-lg-12">
         <div class="card card-primary card-outline">
           <div class="card-body">
+
             <h2>List of Tickets</h2>
             <a href="#" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Add Ticket</a>
+
+            <h2>List of Employees</h2>
+            <a routerLink="/admin/add_employee" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Add
+              Employee</a>
+
             <table class="table table-bordered">
               <thead>
                 <tr>
                   <th>#</th>
-                  <th class="tl">Ticket Name</th>
-                  <th class="">Existing Ticket</th>
-                  <th class="">Project Duration</th>
-                  <th class="">Date</th>
+                  <th class="tl">Ticket Name </th>
+                  <th class="tl">Project</th>
+                  <th class="tl">Project Duration</th>
+                  <th class="tl">Date</th>
                   <th class="">Action</th>
                 </tr>
               </thead>
               <tbody>
+
                 <tr>
                   <td></td>
                   <td></td>
@@ -39,6 +46,18 @@
                   <td>
                     <a href="#" class="btn btn-sm btn-info">Edit</a>
                     <a href="javascript:;" class="btn btn-sm btn-danger alert-delete">Delete</a>
+                    =
+                <tr *ngFor="let ticket of tickets; let i = index">
+                  <td>{{ i + 1 }}</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+
+                  <td>
+                    <a class="btn btn-sm btn-info">Edit</a>
+                    <a class="btn btn-sm btn-danger alert-delete">Delete</a>
+
                     <form id="" method="POST">
                     </form>
                   </td>
@@ -50,4 +69,5 @@
       </div><!-- /.col-lg-12 -->
     </div><!-- /.row -->
   </div><!-- /.container-fluid -->
+
 </div><!-- /.content -->

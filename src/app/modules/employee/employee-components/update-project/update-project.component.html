@@ -1,0 +1,43 @@
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h2 class="m-0 text-dark">Projects</h2><br>
+        <div class="content">
+
+          <div class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="card card-primary card-outline">
+                  <div class="card-body">
+                    <h2>Edit Project</h2>
+
+                    <form [formGroup]="validateFrom">
+                      <div class="card-body">
+
+                        <div class="form-group">
+                          <label for="name">Project Name:</label>
+                          <input formControlName="name" type="text" class="form-control" id="name"
+                            placeholder="Enter Project's name">
+                            <span *ngIf="validateFrom.get('name').invalid && validateFrom.get('name').touched"
+                            class="text-danger">This input is required!</span>
+                        </div>
+
+                        <div class="card-footer">
+                          <button style='margin-right:16px' type="submit" class="btn btn-primary" [disabled]="validateFrom.invalid" (click)="updateProject()" >Submit</button>
+                          <button style='margin-right:16px' class="btn btn-danger" routerLink="/employee/all_projects">Cancel</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
