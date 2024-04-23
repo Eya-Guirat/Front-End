@@ -40,7 +40,7 @@
                   <td>{{ vacation.sd | date: 'd,MMM,y' }}</td>
                   <td>{{ vacation.ed | date: 'd,MMM,y' }}</td>
                   <td>{{ vacation.date | date: 'd,MMM,y' }}</td>
-                  <td><strong [ngStyle]="{'color': vacation.vacationStatus === 'APPROVED' ? 'green' : vacation.vacationStatus === 'DISAPPROVED' ? 'blue' : 'red'}"> {{ vacation.vacationStatus}} </strong> </td>
+                  <td><strong [ngStyle]="{'color': vacation.vacationStatus === 'Approved' ? 'green' : vacation.vacationStatus === 'Disapproved' ? 'blue' : 'red'}"> {{ vacation.vacationStatus}} </strong> </td>
 
 
 
@@ -51,8 +51,8 @@
                         Action <span class="caret"></span>
                       </a>
                       <div class="dropdown-menu">
-                        <a class="dropdown-item" tabindex="-1" >Approved</a>
-                        <a class="dropdown-item" tabindex="-1">Disapproved</a>
+                        <a class="dropdown-item" tabindex="-1" (click)="changeVacationstatus(vacation.id,'Approve')" >Approve</a>
+                        <a class="dropdown-item" tabindex="-1" (click)="changeVacationstatus(vacation.id,'Reject')">Reject</a>
                       </div>
 
               </td>

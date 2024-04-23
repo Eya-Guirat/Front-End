@@ -27,17 +27,17 @@ export class AllVacationsComponent {
       })
     }
 
-  //  changeVacationStatus(vacationId: number, status: String) {
-    //  this.service.changeVacationStatus(vacationId, status).subscribe(
-      //  (res) => {
-         // console.log(res);
-         // if (res.id != null){
-           // this.snackBar.open('Vacation approved successfully', 'Close', {duration: 1000});
-         // } else {
-           // this.snackBar.open("Something went wrong", "Close", {duration: 1000});
-          //}
-        //}
-      //)
-    //}
+    changeVacationstatus(vacationId: number, status: string) {
+     this.service.changeVacationstatus(vacationId, status).subscribe(
+        (res) => {
+          console.log(res);
+          if (res.id != null){
+            this.snackBar.open('Vacation approved successfully', 'Close', {duration: 1000});
+            this.getAllVacations();
+          } else {
+            this.snackBar.open("Something went wrong", "Close", {duration: 1000});
+          }
+        });
+    }
 
 }
