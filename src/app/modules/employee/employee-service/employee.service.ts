@@ -79,6 +79,15 @@ export class EmployeeService {
     )
   }
 
+  applyTicket(ticketDto: any): Observable<any>{
+    ticketDto.userId = StorageService.getUserId();
+    return this.http.post<[]>(BASIC_URL +`api/employee/ticket`, ticketDto,
+    {
+      headers: this.createAuthorizationHeader()
+    }
+    )
+  }
+
 
   createAuthorizationHeader(): HttpHeaders {
     let authHeaders : HttpHeaders = new HttpHeaders();

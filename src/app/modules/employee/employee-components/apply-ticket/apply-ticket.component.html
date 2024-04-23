@@ -1,0 +1,83 @@
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h2 class="m-0 text-dark">Ticket</h2><br>
+        <div class="content">
+
+          <div class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="card card-primary card-outline">
+                  <div class="card-body">
+                    <h2>create Ticket</h2>
+
+                    <form [formGroup]="validateFrom">
+                      <div class="card-body">
+
+                        <div class="form-group">
+                          <label class="tk" for="projectId">Select Project :</label>
+                          <select formControlName="projectId" id="projectId" class="form-control" name="projectId">
+                            <option *ngFor="let project of listOfProjects" [value]="project.id">{{ project.name }}</option>
+                          </select>
+                          <span *ngIf="validateFrom.get('projectId').invalid && validateFrom.get('projectId').touched"
+                            class="text-danger">This input is required!</span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="tname">Ticket's name :</label>
+                          <input formControlName="tname" type="text" class="form-control" id="tname"
+                            placeholder="Enter Ticket's name">
+                            <span *ngIf="validateFrom.get('tname').invalid && validateFrom.get('tname').touched"
+                            class="text-danger">This input is required!</span>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="duration">Duration :</label>
+                          <input formControlName="duration" type="number" step="0.01" class="form-control" id="duration"
+                            placeholder="Enter The Duration">
+                            <span *ngIf="validateFrom.get('duration').invalid && validateFrom.get('duration').touched"
+                            class="text-danger">This input is required!</span>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="tp" for="date">Date :</label>
+                          <input formControlName="date" type="date" id="date" class="form-control">
+                          <span *ngIf="validateFrom.get('date').invalid && validateFrom.get('date').touched"
+                            class="text-danger">This input is required!</span>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="tk" for="ticketStatus">Ticket's Status :</label>
+                          <select formControlName="ticketStatus" id="ticketStatus" class="form-control">
+                            <option *ngFor="let status of STATUS" [value]="status">{{ status }}</option>
+                          </select>
+                          <span *ngIf="validateFrom.get('ticketStatus').invalid && validateFrom.get('ticketStatus').touched"
+                            class="text-danger">This input is required!</span>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="tp" for="description">Description :</label>
+                          <textarea class="form-control" rows="3" formControlName="description" placeholder="Enter ..."></textarea>
+                          <span *ngIf="validateFrom.get('description').invalid && validateFrom.get('description').touched"
+                            class="text-danger">This input is required!</span>
+                        </div>
+
+                        <div class="card-footer">
+                          <button style='margin-right:16px' type="submit" class="btn btn-primary" [disabled]="validateFrom.invalid" >Submit</button>
+                          <button style='margin-right:16px' class="btn btn-danger" routerLink="/employee/all_vacations">Cancel</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
