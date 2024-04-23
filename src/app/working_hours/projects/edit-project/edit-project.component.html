@@ -6,29 +6,31 @@
         <div class="content">
 
           <div class="content">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="card card-primary card-outline">
-                  <div class="card-body">
-                    <h2>Edit Project</h2><br>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card card-primary card-outline">
+                    <div class="card-body">
+                      <h2>Edit Project</h2><br>
 
-                    <form [formGroup]="validateFrom">
-                      <div class="card-body">
+                      <form [formGroup]="validateFrom">
+                        <div class="card-body">
 
-                        <div class="form-group">
-                          <label for="name">Ticket Name:</label>
-                          <input formControlName="name" type="text" class="form-control" id="name"
-                            placeholder="Enter Project's name">
+                          <div class="form-group">
+                            <label for="name">Ticket Name:</label>
+                            <input formControlName="name" type="text" class="form-control" id="name"
+                              placeholder="Enter Project's name">
                             <span *ngIf="validateFrom.get('name').invalid && validateFrom.get('name').touched"
-                            class="text-danger">This input is required!</span>
-                        </div>
+                              class="text-danger">This input is required!</span>
+                          </div>
 
-                        <div class="card-footer">
-                          <button type="submit" class="btn btn-primary" [disabled]="validateFrom.invalid">Submit</button>
+                          <div class="card-footer">
+                            <button type="submit" class="btn btn-primary"
+                              [disabled]="validateFrom.invalid">Submit</button>
+                          </div>
                         </div>
-                      </div>
-                    </form>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -39,4 +41,5 @@
     </div>
   </div>
 </div>
-</div>
+
+<!-- /.content -->

@@ -12,7 +12,14 @@ import { CreateVacationComponent } from './vacation/create-vacation/create-vacat
 import { EditVacationComponent } from './vacation/edit-vacation/edit-vacation.component';
 import { IndexVacationComponent } from './vacation/index-vacation/index-vacation.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
+
+import { CreateEmployeeComponent } from './employee/create-employee/create-employee.component';
+import { EditEmployeeComponent } from './employee/edit-employee/edit-employee.component';
+import { IndexEmployeeComponent } from './employee/index-employee/index-employee.component';
+import { CalendarrComponent } from './calendar/calendarr/calendarr.component';
+
 import { noAuthGuard } from './auth/guards/noAuth-guard/no-auth.guard';
+
 
 
 
@@ -25,7 +32,9 @@ const routes: Routes = [
   { path: "edit_project", component: EditProjectComponent },
   { path: "index_project", component: IndexProjectComponent },
 
-  { path:"header", component: MainHeaderComponent},
+
+  { path: "header", component: MainHeaderComponent },
+
   { path: "create_ticket", component: CreateTicketComponent },
   { path: "create_vacation", component: CreateVacationComponent },
   { path: "edit_vacation", component: EditVacationComponent },
@@ -34,7 +43,10 @@ const routes: Routes = [
 
   { path: "edit_ticket", component: EditTicketComponent },
   { path: "index_ticket", component: IndexTicketComponent },
-
+  { path: "create_employee", component: CreateEmployeeComponent },
+  { path: "edit_employee", component: EditEmployeeComponent },
+  { path: "index_employee", component: IndexEmployeeComponent },
+  { path: "calendarr", component: CalendarrComponent },
 ];
 
 @NgModule({
