@@ -28,12 +28,12 @@ export class ApplyTicketComponent {
 
     ngOnInit(): void {
       this.validateFrom = this.fb.group({
-        projectId:['',Validators.required],
-        tname:['',Validators.required],
-        duration:['',Validators.required],
-        date:['',Validators.required],
-        ticketStatus:['',Validators.required],
-        description:['',Validators.required],
+        projectId:[null ,[Validators.required]],
+        tname:[null ,[Validators.required]],
+        duration:[null ,[Validators.required]],
+        date:[null ,[Validators.required]],
+        ticketStatus:[null ,[Validators.required]],
+        description:[null ,[Validators.required]],
       });
 
       this.getAllProjects();
