@@ -1,0 +1,53 @@
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h2 class="m-0 text-dark">Tickets</h2><br>
+      </div><!-- /.content -->
+    </div><!-- /.col -->
+    </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+
+<!-- Main content -->
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card card-primary card-outline">
+          <div class="card-body">
+            <h2>List of Tickets</h2><br>
+            <a routerLink="/employee/create_ticket"  class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Add Ticket</a><br><br>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th class="tl">Project </th>
+                  <th class="tl">Name </th>
+                  <th class="tl">Duration </th>
+                  <th class="tl">Date </th>
+                  <th class="tl">Status </th>
+                  <th class="tl">Description </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let ticket of tickets; let i = index">
+                  <td>{{ i + 1 }}</td>
+                  <td>{{ ticket.projectName }}</td>
+                  <td>{{ ticket.tname }}</td>
+                  <td>{{ ticket.duration }}</td>
+                  <td>{{ ticket.date | date: 'd,MMM,y' }}</td>
+                  <td>{{ ticket.ticketStatus }}</td>
+                  <td>{{ ticket.description }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- /.card-body -->
+        </div><!-- /.card -->
+      </div><!-- /.col-lg-12 -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+
+
+
+

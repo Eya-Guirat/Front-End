@@ -12,12 +12,13 @@ import { EmployeeService } from '../../employee-service/employee.service';
 export class ApplyTicketComponent {
 
   STATUS : string[] = [
-    "To Do","Doing","Done"
-    ];
+    "ToDo","Doing","Done"
+];
 
     listOfProjects : any = [];
 
     validateFrom:FormGroup;
+  ticketErrorMessage: any;
 
     constructor(
       private service:EmployeeService,
@@ -45,7 +46,8 @@ export class ApplyTicketComponent {
         this.listOfProjects = res;
       },
       error => {
-        console.log('Error:', error);  // Add this line
+        console.log('Error:', error);
+          // Add this line
       }
       );
     }
@@ -53,15 +55,22 @@ export class ApplyTicketComponent {
     applyTicket() {
       console.log(this.validateFrom.value);
       this.service.applyTicket(this.validateFrom.value).subscribe(
-        (res) => {
-          console.log(res);
-          if(res.id != null) {
-            this.snackBar.open('Vacation submitted successfully', 'Close', {duration: 500});
-          } else {
-            this.snackBar.open('Something went wrong', 'Close', {duration: 500});
+          (res) => {
+              console.log(res);
+              if(res.id != null) {
+                  this.snackBar.open('Ticket submitted successfully', 'Close', {duration: 500});
+                  this.router.navigateByUrl('employee/all_tickets');
+              } else {
+                  this.snackBar.open('Something went wrong', 'Close', {duration: 500});
+              }
+          },
+          (error) => {
+              if (this.service.ticketError) {
+                  this.ticketErrorMessage = this.service.ticketErrorMessage;
+                  this.snackBar.open(this.ticketErrorMessage, 'Close', {duration: 500});
+              }
           }
-        }
-      )
-    }
+      );
+  }
 
 }

@@ -8,6 +8,7 @@ import { UpdateProjectComponent } from './employee-components/update-project/upd
 import { ApplyVacationComponent } from './employee-components/apply-vacation/apply-vacation.component';
 import { GetAllVacationsComponent } from './employee-components/get-all-vacations/get-all-vacations.component';
 import { ApplyTicketComponent } from './employee-components/apply-ticket/apply-ticket.component';
+import { GetAllTicketsComponent } from './employee-components/get-all-tickets/get-all-tickets.component';
 
 const routes: Routes = [
   { path: "dashboard", component: DashboardComponent, canActivate: [EmployeeGuard]},
@@ -17,6 +18,8 @@ const routes: Routes = [
   { path: "vacation", component: ApplyVacationComponent, canActivate: [EmployeeGuard]},
   { path: "all_vacations", component: GetAllVacationsComponent, canActivate: [EmployeeGuard]},
   { path: "create_ticket", component: ApplyTicketComponent, canActivate: [EmployeeGuard]},
+  { path: "all_tickets", component: GetAllTicketsComponent, canActivate: [EmployeeGuard]},
+
 ];
 
 @NgModule({

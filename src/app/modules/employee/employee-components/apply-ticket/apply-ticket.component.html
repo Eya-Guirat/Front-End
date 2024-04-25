@@ -23,6 +23,7 @@
                           </select>
                           <span *ngIf="validateFrom.get('projectId').invalid && validateFrom.get('projectId').touched"
                             class="text-danger">This input is required!</span>
+                          <span *ngIf="ticketErrorMessage" class="text-danger">{{ ticketErrorMessage }}</span>
                         </div>
 
                         <div class="form-group">
@@ -51,22 +52,21 @@
                         <div class="form-group">
                           <label class="tk" for="ticketStatus">Ticket's Status :</label>
                           <select formControlName="ticketStatus" id="ticketStatus" class="form-control">
-                            <option *ngFor="let status of STATUS" [value]="status">{{ status }}</option>
+                              <option *ngFor="let status of STATUS" [value]="status">{{ status }}</option>
                           </select>
                           <span *ngIf="validateFrom.get('ticketStatus').invalid && validateFrom.get('ticketStatus').touched"
-                            class="text-danger">This input is required!</span>
-                        </div>
+                              class="text-danger">This input is required!</span>
+                      </div>
 
                         <div class="form-group">
                           <label class="tp" for="description">Description :</label>
                           <textarea class="form-control" rows="3" formControlName="description" placeholder="Enter ..."></textarea>
-                          <span *ngIf="validateFrom.get('description').invalid && validateFrom.get('description').touched"
-                            class="text-danger">This input is required!</span>
+
                         </div>
 
                         <div class="card-footer">
-                          <button style='margin-right:16px' type="submit" class="btn btn-primary" [disabled]="validateFrom.invalid" >Submit</button>
-                          <button style='margin-right:16px' class="btn btn-danger" routerLink="/employee/all_vacations">Cancel</button>
+                          <button style='margin-right:16px' type="submit" class="btn btn-primary" [disabled]="validateFrom.invalid" (click)="applyTicket()" >Submit</button>
+                          <button style='margin-right:16px' class="btn btn-danger" routerLink="/employee/all_tickets">Cancel</button>
                         </div>
                       </div>
                     </form>

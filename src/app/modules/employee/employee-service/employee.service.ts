@@ -1,6 +1,6 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, catchError } from 'rxjs';
 import { StorageService } from 'src/app/auth/services/storage/storage.service';
 
 const BASIC_URL = ["http://localhost:8080/"];
@@ -9,6 +9,8 @@ const BASIC_URL = ["http://localhost:8080/"];
   providedIn: 'root'
 })
 export class EmployeeService {
+  ticketError: boolean;
+  ticketErrorMessage: any;
 
   constructor(private http: HttpClient) { }
 
@@ -79,14 +81,29 @@ export class EmployeeService {
     )
   }
 
-  applyTicket(ticketDto: any): Observable<any>{
+  applyTicket(ticketDto: any): Observable<any> {
     ticketDto.userId = StorageService.getUserId();
     return this.http.post<[]>(BASIC_URL +`api/employee/ticket`, ticketDto,
     {
-      headers: this.createAuthorizationHeader()
-    }
-    )
+        headers: this.createAuthorizationHeader()
+    }).pipe(
+        catchError((error: HttpErrorResponse): never => {
+            if (error.status === 400) {
+                this.ticketError = true;
+                this.ticketErrorMessage = error.error;
+            }
+            throw error;
+        })
+    );
+}
+
+getAllTickets(): Observable<any>{
+  return this.http.get<[]>(BASIC_URL +`api/employee/ticket/${StorageService.getUserId()}`,
+  {
+    headers: this.createAuthorizationHeader()
   }
+  )
+}
 
 
   createAuthorizationHeader(): HttpHeaders {

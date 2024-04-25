@@ -10,6 +10,7 @@ import { UpdateProjectComponent } from './employee-components/update-project/upd
 import { ApplyVacationComponent } from './employee-components/apply-vacation/apply-vacation.component';
 import { GetAllVacationsComponent } from './employee-components/get-all-vacations/get-all-vacations.component';
 import { ApplyTicketComponent } from './employee-components/apply-ticket/apply-ticket.component';
+import { GetAllTicketsComponent } from './employee-components/get-all-tickets/get-all-tickets.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ApplyTicketComponent } from './employee-components/apply-ticket/apply-t
     UpdateProjectComponent,
     ApplyVacationComponent,
     GetAllVacationsComponent,
-    ApplyTicketComponent
+    ApplyTicketComponent,
+    GetAllTicketsComponent
   ],
   imports: [
     CommonModule,
