@@ -25,4 +25,13 @@ export class GetAllTicketsComponent {
       })
     }
 
+    deleteTicket(ticketId:number){
+      console.log(ticketId);
+      this.service.deleteTicket(ticketId).subscribe((res) => {
+        console.log(res);
+        this.getAllTickets();
+        this.snackBar.open("Ticket deleted successfully", "Close", { duration: 500 });
+      })
+    }
+
 }

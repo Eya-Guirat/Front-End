@@ -105,6 +105,29 @@ getAllTickets(): Observable<any>{
   )
 }
 
+deleteTicket(ticketId: any): Observable<any>{
+  return this.http.delete<[]>(BASIC_URL + `api/employee/ticket/${ticketId}`,
+  {
+    headers: this.createAuthorizationHeader()
+  }
+  )
+}
+
+getTicketById(ticketId: number): Observable<any>{
+    return this.http.get<[]>(BASIC_URL +`api/employee/${StorageService.getUserId()}/ticket/${ticketId}`,
+    {
+        headers: this.createAuthorizationHeader()
+    });
+}
+
+
+updateTicket(ticketId: number,ticketDto: any): Observable<any>{
+  console.log(this.createAuthorizationHeader());
+  return this.http.put<[]>(BASIC_URL + `api/employee/${StorageService.getUserId()}/ticket/${ticketId}`, ticketDto, {
+    headers: this.createAuthorizationHeader(),
+  });
+}
+
 
   createAuthorizationHeader(): HttpHeaders {
     let authHeaders : HttpHeaders = new HttpHeaders();

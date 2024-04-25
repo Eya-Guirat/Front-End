@@ -1,0 +1,34 @@
+
+
+h1 {
+  text-align: center;
+}
+
+
+label {
+  display: block;
+  margin-bottom: 10px;
+
+}
+
+
+select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+
+
+h2.m-0 {
+  font-size: 40px;
+
+}
+
+div.card-footer {
+  background-color: white;
+  padding: 12px 30px 12px 1px;
+}
+
+

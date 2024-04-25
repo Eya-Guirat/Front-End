@@ -9,6 +9,7 @@ import { ApplyVacationComponent } from './employee-components/apply-vacation/app
 import { GetAllVacationsComponent } from './employee-components/get-all-vacations/get-all-vacations.component';
 import { ApplyTicketComponent } from './employee-components/apply-ticket/apply-ticket.component';
 import { GetAllTicketsComponent } from './employee-components/get-all-tickets/get-all-tickets.component';
+import { UpdateTicketComponent } from './employee-components/update-ticket/update-ticket.component';
 
 const routes: Routes = [
   { path: "dashboard", component: DashboardComponent, canActivate: [EmployeeGuard]},
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: "all_vacations", component: GetAllVacationsComponent, canActivate: [EmployeeGuard]},
   { path: "create_ticket", component: ApplyTicketComponent, canActivate: [EmployeeGuard]},
   { path: "all_tickets", component: GetAllTicketsComponent, canActivate: [EmployeeGuard]},
+  { path: "create_ticket/:ticketId", component: UpdateTicketComponent, canActivate: [EmployeeGuard]},
 
 ];
 

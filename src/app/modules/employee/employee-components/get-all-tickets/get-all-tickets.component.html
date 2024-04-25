@@ -28,6 +28,7 @@
                   <th class="tl">Date </th>
                   <th class="tl">Status </th>
                   <th class="tl">Description </th>
+                  <th class="">Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -39,6 +40,15 @@
                   <td>{{ ticket.date | date: 'd,MMM,y' }}</td>
                   <td>{{ ticket.ticketStatus }}</td>
                   <td>{{ ticket.description }}</td>
+
+                  <td>
+                    <a style='margin-right:16px' class="btn btn-sm btn-info" [routerLink]="['/employee/create_ticket', ticket.id]" ><i class="fas fa-pencil-alt"></i>Edit</a>
+                    <a style='margin-right:16px' class="btn btn-sm btn-danger alert-delete" (click)="deleteTicket(ticket.id)"><i class="fas fa-trash"></i>Delete</a>
+
+                    <form id="" method="POST">
+                    </form>
+                  </td>
+
                 </tr>
               </tbody>
             </table>
