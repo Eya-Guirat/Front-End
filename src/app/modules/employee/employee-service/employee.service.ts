@@ -81,6 +81,14 @@ export class EmployeeService {
     )
   }
 
+  deleteVacation(vacationId: any): Observable<any>{
+    return this.http.delete<[]>(BASIC_URL + `api/employee/vacation/${vacationId}`,
+    {
+      headers: this.createAuthorizationHeader()
+    }
+    )
+  }
+
   applyTicket(ticketDto: any): Observable<any> {
     ticketDto.userId = StorageService.getUserId();
     return this.http.post<[]>(BASIC_URL +`api/employee/ticket`, ticketDto,

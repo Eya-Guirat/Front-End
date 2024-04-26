@@ -25,4 +25,13 @@ export class GetAllVacationsComponent {
       })
     }
 
+    deleteVacation(vacationId:number){
+      console.log(vacationId);
+      this.service.deleteVacation(vacationId).subscribe((res) => {
+        console.log(res);
+        this.getAllVacations();
+        this.snackBar.open("Vacation deleted successfully", "Close", { duration: 500 });
+      })
+    }
+
 }
