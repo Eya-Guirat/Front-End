@@ -35,7 +35,7 @@
                   <td>{{ employee.email }}</td>
                   <td>{{ employee.name }}</td>
                   <td>{{ employee.gender }}</td>
-                  <td>{{ employee.dob | date: 'd,MMM,y' }}</td>
+                  <td>{{ employee.dob | date: 'd/MMM/y' }}</td>
 
                   <td>
                     <a style='margin-right:16px' class="btn btn-info btn-sm" routerLink="/admin/add_employee/{{employee.id}}"><i class="fas fa-pencil-alt"></i>Edit</a>

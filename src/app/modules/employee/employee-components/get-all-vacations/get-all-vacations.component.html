@@ -37,7 +37,7 @@
                   <td>{{ vacation.ed | date: 'd/MMM/y' }}</td>
                   <td><strong [ngStyle]="{'color': vacation.vacationStatus === 'Approved' ? 'green' : vacation.vacationStatus === 'Disapproved' ? 'blue' : 'red'}"> {{ vacation.vacationStatus}} </strong> </td>
                   <td>
-                    <a style='margin-right:16px' class="btn btn-sm btn-info" ><i class="fas fa-pencil-alt"></i>Edit</a>
+                    <a *ngIf="vacation.vacationStatus === 'Pending'" style='margin-right:16px' class="btn btn-sm btn-info" ><i class="fas fa-pencil-alt" [routerLink]="['/employee/vacation', vacation.id]"></i>Edit</a>
                     <a style='margin-right:16px' class="btn btn-sm btn-danger alert-delete" (click)="deleteVacation(vacation.id)" ><i class="fas fa-trash"></i>Delete</a>
                   </td>
 

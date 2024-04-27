@@ -30,11 +30,9 @@ import { IndexBoardComponent } from './working_hours/board/index-board/index-boa
 import { CreateVacationComponent } from './vacation/create-vacation/create-vacation.component';
 import { EditVacationComponent } from './vacation/edit-vacation/edit-vacation.component';
 import { IndexVacationComponent } from './vacation/index-vacation/index-vacation.component';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { CreateEmployeeComponent } from './employee/create-employee/create-employee.component';
-import { EditEmployeeComponent } from './employee/edit-employee/edit-employee.component';
-import { IndexEmployeeComponent } from './employee/index-employee/index-employee.component';
-import { CalendarrComponent } from './calendar/calendarr/calendarr.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 
 
@@ -61,22 +59,10 @@ import { CalendarrComponent } from './calendar/calendarr/calendarr.component';
     CreateBoardComponent,
     EditBoardComponent,
     IndexBoardComponent,
-
-
-
     CreateVacationComponent,
     EditVacationComponent,
     IndexVacationComponent,
 
-
-
-    CreateVacationComponent,
-    EditVacationComponent,
-    IndexVacationComponent,
-    CreateEmployeeComponent,
-    EditEmployeeComponent,
-    IndexEmployeeComponent,
-    CalendarrComponent,
 
 
   ],
@@ -91,7 +77,9 @@ import { CalendarrComponent } from './calendar/calendarr/calendarr.component';
     MatInputModule,
     MatButtonModule,
     MatSnackBarModule,
-    BrowserAnimationsModule
+
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

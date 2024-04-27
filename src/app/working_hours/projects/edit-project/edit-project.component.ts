@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { CalendarView } from 'angular-calendar';
 
 @Component({
   selector: 'app-edit-project',
@@ -20,6 +21,14 @@ export class EditProjectComponent  {
     this.validateFrom = this.fb.group({
       name:['',Validators.required],
     })
+  }
+  viewDate: Date = new Date();
+  view: CalendarView = CalendarView.Week;
+  CalendarView = CalendarView;
+
+
+  setView(view: CalendarView) {
+    this.view = view;
   }
 
 }

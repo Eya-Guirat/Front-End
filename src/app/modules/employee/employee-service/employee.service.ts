@@ -89,6 +89,20 @@ export class EmployeeService {
     )
   }
 
+  getVacationById(vacationId: number): Observable<any>{
+    return this.http.get<[]>(BASIC_URL +`api/employee/${StorageService.getUserId()}/vacation/${vacationId}`,
+    {
+        headers: this.createAuthorizationHeader()
+    });
+}
+
+updateVacation(vacationId: number,vacationDto: any): Observable<any>{
+  console.log(this.createAuthorizationHeader());
+  return this.http.put<[]>(BASIC_URL + `api/employee/${StorageService.getUserId()}/vacation/${vacationId}`, vacationDto, {
+    headers: this.createAuthorizationHeader(),
+  });
+}
+
   applyTicket(ticketDto: any): Observable<any> {
     ticketDto.userId = StorageService.getUserId();
     return this.http.post<[]>(BASIC_URL +`api/employee/ticket`, ticketDto,

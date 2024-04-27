@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { EmployeeService } from '../../employee-service/employee.service';
+import { CalendarView } from 'angular-calendar';
 
 @Component({
   selector: 'app-dashboard',
@@ -27,6 +28,16 @@ export class DashboardComponent {
     )
 
   }
+
+  viewDate: Date = new Date();
+  view: CalendarView = CalendarView.Week;
+  CalendarView = CalendarView;
+
+
+  setView(view: CalendarView) {
+    this.view = view;
+  }
+
 
 
 }

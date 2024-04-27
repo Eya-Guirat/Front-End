@@ -37,9 +37,9 @@
                   <td>{{ i + 1 }}</td>
                   <td>{{ vacation.name }}</td>
                   <td>{{ vacation.type }}</td>
-                  <td>{{ vacation.sd | date: 'd,MMM,y' }}</td>
-                  <td>{{ vacation.ed | date: 'd,MMM,y' }}</td>
-                  <td>{{ vacation.date | date: 'd,MMM,y' }}</td>
+                  <td>{{ vacation.sd | date: 'd/MMM/y' }}</td>
+                  <td>{{ vacation.ed | date: 'd/MMM/y' }}</td>
+                  <td>{{ vacation.date | date: 'd/MMM/y' }}</td>
                   <td><strong [ngStyle]="{'color': vacation.vacationStatus === 'Approved' ? 'green' : vacation.vacationStatus === 'Disapproved' ? 'blue' : 'red'}"> {{ vacation.vacationStatus}} </strong> </td>
 
 

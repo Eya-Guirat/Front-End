@@ -12,6 +12,11 @@ import { GetAllVacationsComponent } from './employee-components/get-all-vacation
 import { ApplyTicketComponent } from './employee-components/apply-ticket/apply-ticket.component';
 import { GetAllTicketsComponent } from './employee-components/get-all-tickets/get-all-tickets.component';
 import { UpdateTicketComponent } from './employee-components/update-ticket/update-ticket.component';
+import { CalendarEmployeeComponent } from './employee-components/calendar-employee/calendar-employee.component';
+import { UpdateVacationComponent } from './employee-components/update-vacation/update-vacation.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+
 
 
 @NgModule({
@@ -24,14 +29,20 @@ import { UpdateTicketComponent } from './employee-components/update-ticket/updat
     GetAllVacationsComponent,
     ApplyTicketComponent,
     GetAllTicketsComponent,
-    UpdateTicketComponent
+    UpdateTicketComponent,
+    UpdateVacationComponent,
+
+    CalendarEmployeeComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     EmployeeRoutingModule
-  ]
+  ],
+
 })
 export class EmployeeModule { }

@@ -65,10 +65,8 @@ export class ApplyTicketComponent {
               }
           },
           (error) => {
-              if (this.service.ticketError) {
-                  this.ticketErrorMessage = this.service.ticketErrorMessage;
-                  this.snackBar.open(this.ticketErrorMessage, 'Close', {duration: 500});
-              }
+              this.ticketErrorMessage = error.error;
+              this.snackBar.open('A ticket with the same name already exists for today.', 'Close', {duration: 2000});
           }
       );
   }

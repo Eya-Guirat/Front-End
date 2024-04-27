@@ -1,1 +1,21 @@
-<p>dashboard works!</p>
+<div id="calendar-container">
+  <div id="cal-buttons" _ngcontent-kea-c45="">
+    <div id="cal-date-nav-buttons" class="navigation">
+      <button id="previous" mwlCalendarPreviousView [(viewDate)]="viewDate" [view]="view"
+        class="btn btn-primary">Previous</button>
+      <button id="today" mwlCalendarToday [(viewDate)]="viewDate" class="btn btn-primary">Today</button>
+      <button id="next" mwlCalendarNextView [(viewDate)]="viewDate" [view]="view" class="btn btn-primary">Next</button>
+    </div>
+    <div id="cal-date-field" class="calendar">{{ viewDate | calendarDate:(view + 'ViewTitle') : 'en'}}</div>
+    <div id="cal-view-nav-buttons" class="mmm">
+      <button id="month" (click)="setView(CalendarView.Month)" class="btn btn-primary">Month</button>
+      <button id="week" (click)="setView(CalendarView.Week)" class="btn btn-primary">Week</button>
+      <button id="day" (click)="setView(CalendarView.Day)" class="btn btn-primary">Day</button>
+    </div>
+  </div>
+  <span [ngSwitch]="view">
+    <mwl-calendar-month-view *ngSwitchCase="CalendarView.Month" [viewDate]="viewDate"></mwl-calendar-month-view>
+    <mwl-calendar-week-view *ngSwitchCase="CalendarView.Week" [viewDate]="viewDate"></mwl-calendar-week-view>
+    <mwl-calendar-day-view *ngSwitchCase="CalendarView.Day" [viewDate]="viewDate"></mwl-calendar-day-view>
+  </span>
+</div>

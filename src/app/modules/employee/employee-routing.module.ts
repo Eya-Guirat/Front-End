@@ -10,6 +10,7 @@ import { GetAllVacationsComponent } from './employee-components/get-all-vacation
 import { ApplyTicketComponent } from './employee-components/apply-ticket/apply-ticket.component';
 import { GetAllTicketsComponent } from './employee-components/get-all-tickets/get-all-tickets.component';
 import { UpdateTicketComponent } from './employee-components/update-ticket/update-ticket.component';
+import { UpdateVacationComponent } from './employee-components/update-vacation/update-vacation.component';
 
 const routes: Routes = [
   { path: "dashboard", component: DashboardComponent, canActivate: [EmployeeGuard]},
@@ -18,10 +19,10 @@ const routes: Routes = [
   { path: "create_project/:projectId", component: UpdateProjectComponent, canActivate: [EmployeeGuard]},
   { path: "vacation", component: ApplyVacationComponent, canActivate: [EmployeeGuard]},
   { path: "all_vacations", component: GetAllVacationsComponent, canActivate: [EmployeeGuard]},
+  { path: "vacation/:vacationId", component: UpdateVacationComponent, canActivate: [EmployeeGuard]},
   { path: "create_ticket", component: ApplyTicketComponent, canActivate: [EmployeeGuard]},
   { path: "all_tickets", component: GetAllTicketsComponent, canActivate: [EmployeeGuard]},
   { path: "create_ticket/:ticketId", component: UpdateTicketComponent, canActivate: [EmployeeGuard]},
-
 ];
 
 @NgModule({
