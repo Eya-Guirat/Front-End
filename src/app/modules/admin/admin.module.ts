@@ -13,6 +13,9 @@ import { AllEmployeesComponent } from './admin-components/all-employees/all-empl
 import { UpdateEmployeeComponent } from './admin-components/update-employee/update-employee.component';
 import {MatCardModule} from '@angular/material/card';
 import { AllVacationsComponent } from './admin-components/all-vacations/all-vacations.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+
 
 @NgModule({
   declarations: [
@@ -32,6 +35,7 @@ import { AllVacationsComponent } from './admin-components/all-vacations/all-vaca
     MatDatepickerModule,
     MatCardModule,
     MatNativeDateModule,
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     AdminRoutingModule
   ]
 })
