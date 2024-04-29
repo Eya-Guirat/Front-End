@@ -1,18 +1,78 @@
 <div id="calendar-container">
   <div id="cal-buttons" _ngcontent-kea-c45="">
+
     <div id="cal-date-nav-buttons" class="navigation">
+      <div style='margin-left:1115px'>
+
+
+
+
+
+
+
+
+        <button style="position: relative;
+        top: 15px;" id="month" class="btn btn-primary" >Generate report </button>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <div>
+
+        <div class="empl">
+        <button  type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+          Employee's Name
+        </button>
+        <ul class="dropdown-menu">
+          <li class="dropdown-item">Action</li>
+          <li class="dropdown-item">Another action</li>
+          <li class="dropdown-item">Something else here</li>
+        </ul>
+      </div>
+
+<div class="top">
       <button id="previous" mwlCalendarPreviousView [(viewDate)]="viewDate" [view]="view"
-        class="btn btn-primary" style='margin-right:5px'>Previous</button>
-      <button id="today" mwlCalendarToday [(viewDate)]="viewDate" class="btn btn-primary" style='margin-right:5px'>Today</button>
-      <button id="next" mwlCalendarNextView [(viewDate)]="viewDate" [view]="view" class="btn btn-primary" style='margin-right:5px'>Next</button>
+        class="btn btn-primary" style='margin-right:1px'>Previous</button>
+      <button id="today" mwlCalendarToday [(viewDate)]="viewDate" class="btn btn-primary" style='margin-right:1px'>Today</button>
+      <button id="next" mwlCalendarNextView [(viewDate)]="viewDate" [view]="view" class="btn btn-primary" style='margin-right:1px'>Next</button>
     </div>
-    <div id="cal-date-field" class="calendar">{{ viewDate | calendarDate:(view + 'ViewTitle') : 'en'}}</div>
+
+
+
+    </div>
+
+    </div>
+    <div id="cal-date-field" class="calendar" >{{ viewDate | calendarDate:(view + 'ViewTitle') : 'en'}}</div>
+
+
+
+
     <div id="cal-view-nav-buttons" class="mmm">
-      <button id="month" (click)="setView(CalendarView.Month)" class="btn btn-primary" style='margin-right:5px'>Month</button>
-      <button id="week" (click)="setView(CalendarView.Week)" class="btn btn-primary" style='margin-right:5px'>Week</button>
-      <button id="day" (click)="setView(CalendarView.Day)" class="btn btn-primary" style='margin-right:5px'>Day</button>
+
+      <button id="week" (click)="setView(CalendarView.Week)" class="btn btn-primary" style='margin-right:1px'>Week</button>
+      <button id="day" (click)="setView(CalendarView.Day)" class="btn btn-primary" style='margin-right:1px'>Day</button>
     </div>
+
+
+
+
+
+
+
   </div>
+
+
+
+
   <span [ngSwitch]="view">
     <mwl-calendar-month-view *ngSwitchCase="CalendarView.Month" [viewDate]="viewDate" [events]="events"></mwl-calendar-month-view>
     <mwl-calendar-week-view *ngSwitchCase="CalendarView.Week" [viewDate]="viewDate" [events]="events"></mwl-calendar-week-view>

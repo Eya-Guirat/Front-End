@@ -1,15 +1,40 @@
 .calendar {
+  position: relative;
+  bottom: 50px;
   text-align: center;
-  font-size: 30px;
+  font-size: 45px;
 }
 
 .mmm {
-  margin-left: 990px;
+  margin-left: 1133px;
   position: relative;
+  bottom: 10px;
 }
 
 .navigation {
   position: relative;
   top: 57px;
+
 }
 
+.btn-warning {
+  background-color:#007bff;
+  border-color: #007bff;
+  color: aliceblue;
+}
+
+.btn-warning:not(:disabled):not(.disabled).active, .btn-warning:not(:disabled):not(.disabled):active, .show>.btn-warning.dropdown-toggle {
+  background-color:#007bff;
+  border-color: #007bff;
+  color: aliceblue;
+}
+
+
+.empl{
+  position: relative;
+  bottom: 25px;
+}
+.top{
+  position: relative;
+  bottom: 10px;
+}
