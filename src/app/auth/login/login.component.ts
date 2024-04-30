@@ -14,6 +14,8 @@ export class LoginComponent {
 
   loginForm: FormGroup | undefined;
 
+  status: any;
+
   constructor(
     private service: AuthService,
      private fb: FormBuilder,
@@ -41,7 +43,7 @@ export class LoginComponent {
             this.router.navigateByUrl("employee/dashboard");
           }
       }),
-      error => {
+      (error) => {
         if(error.status == 406){
           this.snackbar.open("User is not active", "Close", {
             duration: 5000

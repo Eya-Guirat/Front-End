@@ -35,6 +35,7 @@ export class ApplyTicketComponent {
         date:[null ,[Validators.required]],
         ticketStatus:[null ,[Validators.required]],
         description:[null ,[Validators.required]],
+
       });
 
       this.getAllProjects();
@@ -53,22 +54,28 @@ export class ApplyTicketComponent {
     }
 
     applyTicket() {
-      console.log(this.validateFrom.value);
-      this.service.applyTicket(this.validateFrom.value).subscribe(
-          (res) => {
-              console.log(res);
-              if(res.id != null) {
-                  this.snackBar.open('Ticket submitted successfully', 'Close', {duration: 500});
-                  this.router.navigateByUrl('employee/all_tickets');
-              } else {
-                  this.snackBar.open('Something went wrong', 'Close', {duration: 500});
-              }
-          },
-          (error) => {
-              this.ticketErrorMessage = error.error;
-              this.snackBar.open('A ticket with the same name already exists for today.', 'Close', {duration: 2000});
+      let ticket = this.validateFrom.value;
+  let parts = ticket.date.split(/[-T:]/); // split the date string on hyphens, T, and colons
+  let date = new Date(parts[0], parts[1] - 1, parts[2], parts[3], parts[4]);
+  ticket.date = date.toISOString();
+      console.log(ticket); // This will log the ticket data to the console
+
+      this.service.applyTicket(ticket).subscribe(
+        (res) => {
+          console.log(res);
+          if(res.id != null) {
+            this.snackBar.open('Ticket submitted successfully', 'Close', {duration: 500});
+            this.router.navigateByUrl('employee/all_tickets');
+          } else {
+            this.snackBar.open('Something went wrong', 'Close', {duration: 500});
           }
+        },
+        (error) => {
+          this.ticketErrorMessage = error.error;
+          this.snackBar.open('A ticket with the same name already exists for today.', 'Close', {duration: 2000});
+        }
       );
-  }
+    }
+
 
 }
