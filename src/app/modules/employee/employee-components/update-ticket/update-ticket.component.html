@@ -43,11 +43,13 @@
                         </div>
 
                         <div class="form-group">
-                          <label class="tp" for="date">Date :</label>
-                          <input formControlName="date" type="date" id="date" class="form-control">
+                          <label class="tp" for="date">Date and Time :</label>
+                          <input formControlName="date" type="datetime-local" id="date" class="form-control">
                           <span *ngIf="validateFrom.get('date').invalid && validateFrom.get('date').touched"
                             class="text-danger">This input is required!</span>
                         </div>
+
+
 
                         <div class="form-group">
                           <label class="tk" for="ticketStatus">Ticket's Status :</label>

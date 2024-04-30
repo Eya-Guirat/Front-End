@@ -42,12 +42,20 @@ listOfProjects : any = [];
   }
 
   getTicketById(){
-      this.service.getTicketById(this.ticketId).subscribe((res) => {
-        const ticket = res.ticketDto;
-        this.validateFrom.patchValue(ticket);
-          console.log(res);
-      })
+    this.service.getTicketById(this.ticketId).subscribe((res) => {
+      const ticket = res.ticketDto;
+
+      let date = new Date(ticket.date);
+      let localDate = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
+      ticket.date = localDate.toISOString().substring(0, 16);
+
+      this.validateFrom.patchValue(ticket);
+      console.log(res);
+    })
   }
+
+
+
 
   getAllProjects() {
     this.service.getAllProjects().subscribe(res=>{

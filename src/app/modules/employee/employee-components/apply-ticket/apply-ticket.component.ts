@@ -55,9 +55,9 @@ export class ApplyTicketComponent {
 
     applyTicket() {
       let ticket = this.validateFrom.value;
-  let parts = ticket.date.split(/[-T:]/); // split the date string on hyphens, T, and colons
-  let date = new Date(parts[0], parts[1] - 1, parts[2], parts[3], parts[4]);
-  ticket.date = date.toISOString();
+      let parts = ticket.date.split(/[-T:]/); // split the date string on hyphens, T, and colons
+      let date = new Date(parts[0], parts[1] - 1, parts[2], parts[3], parts[4]);
+      ticket.date = date.toISOString();
       console.log(ticket); // This will log the ticket data to the console
 
       this.service.applyTicket(ticket).subscribe(
