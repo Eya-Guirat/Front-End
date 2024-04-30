@@ -46,13 +46,19 @@ listOfProjects : any = [];
       const ticket = res.ticketDto;
 
       let date = new Date(ticket.date);
+      // Convert the date to the user's local time
       let localDate = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
-      ticket.date = localDate.toISOString().substring(0, 16);
+      // Format the date to 'YYYY-MM-DDTHH:mm'
+      let dateString = localDate.toISOString().substring(0, 16);
+
+      ticket.date = dateString;
 
       this.validateFrom.patchValue(ticket);
       console.log(res);
     })
   }
+
+
 
 
 
@@ -64,7 +70,7 @@ listOfProjects : any = [];
     },
     error => {
       console.log('Error:', error);
-        // Add this line
+
     }
     );
   }

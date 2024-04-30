@@ -25,7 +25,7 @@
                   <th class="tl">Project </th>
                   <th class="tl">Name </th>
                   <th class="tl">Duration </th>
-                  <th class="tl">Date </th>
+                  <th class="tl">Date and Time </th>
                   <th class="tl">Status </th>
                   <th class="tl">Description </th>
                   <th class="">Action</th>
@@ -37,7 +37,7 @@
                   <td>{{ ticket.projectName }}</td>
                   <td>{{ ticket.tname }}</td>
                   <td>{{ ticket.duration }}</td>
-                  <td>{{ ticket.date | date: 'd/MMM/y' }}</td>
+                  <td>{{ ticket.date | date: 'd/MMM/y | H:mm'  }}</td>
                   <td>{{ ticket.ticketStatus }}</td>
                   <td>{{ ticket.description }}</td>
 
