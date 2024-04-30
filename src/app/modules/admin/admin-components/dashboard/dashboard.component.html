@@ -29,13 +29,11 @@
       <div>
 
         <div class="empl">
-        <button  type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+        <button  type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" >
           Employee's Name
         </button>
         <ul class="dropdown-menu">
-          <li class="dropdown-item">Action</li>
-          <li class="dropdown-item">Another action</li>
-          <li class="dropdown-item">Something else here</li>
+          <li class="dropdown-item" *ngFor="let employee of listOfEmployees" [value]="employee.id">{{ employee.name }}</li>
         </ul>
       </div>
 

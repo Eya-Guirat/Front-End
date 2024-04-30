@@ -28,10 +28,22 @@ export class DashboardComponent {
   };
 
 
+
+
+  listOfEmployees : any = [];
+
   constructor(private service: AdminService, private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
     this.getAllVacations();
+    this.getAllEmployee();
+  }
+
+  getAllEmployee(){
+    this.service.getAllEmployee().subscribe((res) =>{
+      console.log(res);
+      this.listOfEmployees = res;
+    })
   }
 
   getAllVacations(){
@@ -67,6 +79,10 @@ export class DashboardComponent {
   setView(view: CalendarView) {
     this.view = view;
   }
+
+
+
+
 
 
 }
