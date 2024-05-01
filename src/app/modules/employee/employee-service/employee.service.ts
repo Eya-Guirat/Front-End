@@ -9,6 +9,9 @@ const BASIC_URL = ["http://localhost:8080/"];
   providedIn: 'root'
 })
 export class EmployeeService {
+  getAllEmployee() {
+    throw new Error('Method not implemented.');
+  }
   ticketError: boolean;
   ticketErrorMessage: any;
 
