@@ -4,27 +4,10 @@
     <div id="cal-date-nav-buttons" class="navigation">
       <div style='margin-left:1115px'>
 
-
-
-
-
-
-
-
         <button style="position: relative;
         top: 15px;" id="month" class="btn btn-primary" >Generate report </button>
 
       </div>
-
-
-
-
-
-
-
-
-
-
 
       <div>
 
@@ -33,7 +16,7 @@
           Employee's Name
         </button>
         <ul class="dropdown-menu">
-          <li class="dropdown-item" *ngFor="let employee of listOfEmployees" [value]="employee.id">{{ employee.name }}</li>
+          <li class="dropdown-item" *ngFor="let employee of listOfEmployees" [value]="employee.id" (click)="getEmployeeData(employee.id)" >{{ employee.name }}</li>
         </ul>
       </div>
 
@@ -44,15 +27,10 @@
       <button id="next" mwlCalendarNextView [(viewDate)]="viewDate" [view]="view" class="btn btn-primary" style='margin-right:1px'>Next</button>
     </div>
 
-
-
     </div>
 
     </div>
     <div id="cal-date-field" class="calendar" >{{ viewDate | calendarDate:(view + 'ViewTitle') : 'en'}}</div>
-
-
-
 
     <div id="cal-view-nav-buttons" class="mmm">
 
@@ -60,16 +38,7 @@
       <button id="day" (click)="setView(CalendarView.Day)" class="btn btn-primary" style='margin-right:1px'>Day</button>
     </div>
 
-
-
-
-
-
-
   </div>
-
-
-
 
   <span [ngSwitch]="view">
     <mwl-calendar-month-view *ngSwitchCase="CalendarView.Month" [viewDate]="viewDate" [events]="events"></mwl-calendar-month-view>

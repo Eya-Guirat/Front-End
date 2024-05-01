@@ -67,6 +67,22 @@ export class AdminService {
     )
   }
 
+  getAllAppliedVacationsByEmployeeId(employeeId: number): Observable<any>{
+    return this.http.get<[]>(BASIC_URL +`api/employee/vacation/${employeeId}`,
+    {
+      headers: this.createAuthorizationHeader()
+    }
+    )
+  }
+
+  getAllTickets(employeeId: number): Observable<any>{
+    return this.http.get<[]>(BASIC_URL +`api/employee/ticket/${employeeId}`,
+    {
+      headers: this.createAuthorizationHeader()
+    }
+    )
+  }
+
   createAuthorizationHeader(): HttpHeaders {
     let authHeaders : HttpHeaders = new HttpHeaders();
     return authHeaders.set(
