@@ -76,7 +76,14 @@ listOfProjects : any = [];
   }
 
   updateTicket() {
-    this.service.updateTicket(this.ticketId, this.validateFrom.value).subscribe((res) => {
+    let ticket = this.validateFrom.value;
+    let parts = ticket.date.split(/[-T:]/); // split the date string on hyphens, T, and colons
+    let date = new Date(parts[0], parts[1] - 1, parts[2], parts[3], parts[4]);
+    // Convert the date to ISO string without adjusting for timezone
+    ticket.date = date.toISOString();
+    console.log(ticket); // This will log the ticket data to the console
+
+    this.service.updateTicket(this.ticketId, ticket).subscribe((res) => {
       console.log(res);
       if (res.id != null){
         this.snackBar.open('Ticket edited successfully', 'Close', {duration: 500});
