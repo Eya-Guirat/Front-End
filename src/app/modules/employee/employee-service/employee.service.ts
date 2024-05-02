@@ -12,6 +12,7 @@ export class EmployeeService {
   getAllEmployee() {
     throw new Error('Method not implemented.');
   }
+
   ticketError: boolean;
   ticketErrorMessage: any;
 
@@ -151,6 +152,14 @@ updateTicket(ticketId: number,ticketDto: any): Observable<any>{
   return this.http.put<[]>(BASIC_URL + `api/employee/${StorageService.getUserId()}/ticket/${ticketId}`, ticketDto, {
     headers: this.createAuthorizationHeader(),
   });
+}
+
+updateEmployee(employeeDto: any): Observable<any>{
+  return this.http.put<[]>(BASIC_URL +`api/employee/${StorageService.getUserId()}`, employeeDto,
+  {
+    headers: this.createAuthorizationHeader()
+  }
+  )
 }
 
 
