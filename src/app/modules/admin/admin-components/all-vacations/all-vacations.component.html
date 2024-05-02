@@ -40,7 +40,7 @@
                   <td>{{ vacation.sd | date: 'd/MMM/y' }}</td>
                   <td>{{ vacation.ed | date: 'd/MMM/y' }}</td>
                   <td>{{ vacation.date | date: 'd/MMM/y' }}</td>
-                  <td><strong [ngStyle]="{'color': vacation.vacationStatus === 'Approved' ? 'green' : vacation.vacationStatus === 'Disapproved' ? 'blue' : 'red'}"> {{ vacation.vacationStatus}} </strong> </td>
+                  <td><strong [ngStyle]="{'color': vacation.vacationStatus === 'Approved' ? '#5fbd00' : vacation.vacationStatus === 'Disapproved' ? '#f8007c' : '	#F4C430'}"> {{ vacation.vacationStatus}} </strong> </td>
 
 
 
