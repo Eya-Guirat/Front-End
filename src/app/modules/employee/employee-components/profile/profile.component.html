@@ -14,29 +14,30 @@
   <div class="col-md-3">
 
     <!-- Profile Image -->
-    <div class="card card-primary card-outline  my-custom-card">
-      <div class="card-body box-profile">
-        <div class="text-center">
+    <div class="card card-primary card-outline  my-custom-card" *ngIf="employee" >
+      <div class="card-body box-profile" >
+        <div class="text-center" >
 
         </div>
 
-        <h3 class="profile-username text-center">Nina Mcintire</h3>
+        <h3 style="font-size: 30px;" class="profile-username text-center"><b>{{ employee.name }}</b></h3><br>
 
         <p class="text-muted text-center">Employee</p>
 
         <ul class="list-group list-group-unbordered mb-3">
           <li class="list-group-item ">
-            <b>Followers</b> <a class="float-right">1,322</a>
+            <b>Email</b> <a class="float-right">{{ employee.email }}</a>
           </li>
           <li class="list-group-item">
-            <b>Following</b> <a class="float-right">543</a>
+            <b>Gender        </b> <a class="float-right">{{ employee.gender }}</a>
           </li>
           <li class="list-group-item">
-            <b>Friends</b> <a class="float-right">13,287</a>
+            <b>Date Of Birth </b> <a class="float-right">{{ employee.dob | date : 'MMM d,y' }}</a>
           </li>
         </ul>
 
-        <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
+
+        <a href="#" class="btn btn-primary btn-block"><b>Update</b></a>
       </div>
       <!-- /.card-body -->
     </div>
