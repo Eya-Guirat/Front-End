@@ -1,6 +1,6 @@
 <div *ngIf="!isAdminLoggedIn && !isEmployeeLoggedIn">
   <mat-toolbar color="primary" class="navbar">
-    <span class="nav-brand">Not LoggedIn</span>
+    <span class="nav-brand">Not Logged In</span>
     <span class="spacer"></span>
     <button mat-button routerLink="/login" routerLinkActive="active">LOGIN</button>
   </mat-toolbar>
@@ -178,6 +178,17 @@
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 Vacation
+              </p>
+            </a>
+          </li>
+
+          <br>
+
+          <li class="nav-item">
+            <a routerLink="/employee/profile" routerLinkActive="active" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Profile
               </p>
             </a>
           </li>

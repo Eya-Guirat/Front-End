@@ -16,6 +16,7 @@ import { CalendarEmployeeComponent } from './employee-components/calendar-employ
 import { UpdateVacationComponent } from './employee-components/update-vacation/update-vacation.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { ProfileComponent } from './employee-components/profile/profile.component';
 
 
 
@@ -32,7 +33,8 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     UpdateTicketComponent,
     UpdateVacationComponent,
 
-    CalendarEmployeeComponent
+    CalendarEmployeeComponent,
+      ProfileComponent
   ],
   imports: [
     CommonModule,
