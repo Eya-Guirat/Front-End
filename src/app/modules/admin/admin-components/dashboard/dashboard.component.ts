@@ -12,7 +12,7 @@ import { AdminService } from '../../admin-service/admin.service';
 export class DashboardComponent {
 
 
-
+  isSpinning: boolean;
 
   listOfEmployees : any = [];
 
@@ -39,6 +39,7 @@ export class DashboardComponent {
   getEmployeeData(employeeId: number) {
     this.service.getAllTickets(employeeId).subscribe((res) => {
       console.log(res);
+      this.isSpinning = true;
     this.tickets = res;
     this.ticketEvents = res.map(ticket => {
       let parts = ticket.date.split(/[-T:.]/); // split the date string on hyphens, T, colons, and periods
@@ -49,6 +50,9 @@ export class DashboardComponent {
       };
     });
     this.events = [...this.ticketEvents, ...this.vacationEvents];
+    setTimeout(() => {
+      this.isSpinning = false; // Hide the spinner after a delay
+    }, 1000);
     });
 
 
@@ -95,6 +99,9 @@ export class DashboardComponent {
       };
     });
     this.events = [...this.ticketEvents, ...this.vacationEvents];
+    setTimeout(() => {
+      this.isSpinning = false; // Hide the spinner after a delay
+    }, 1000);
     });
   }
 

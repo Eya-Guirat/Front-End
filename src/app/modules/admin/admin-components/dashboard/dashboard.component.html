@@ -1,3 +1,5 @@
+<mat-spinner *ngIf="isSpinning" [diameter]="70" class="spinner"></mat-spinner>
+<div *ngIf="!isSpinning">
 <div id="calendar-container">
   <div id="cal-buttons" _ngcontent-kea-c45="">
 
@@ -46,3 +48,5 @@
     <mwl-calendar-day-view *ngSwitchCase="CalendarView.Day" [viewDate]="viewDate" [events]="events"></mwl-calendar-day-view>
   </span>
 </div>
+</div>
+

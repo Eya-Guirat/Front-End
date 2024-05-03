@@ -16,6 +16,7 @@ import { AllVacationsComponent } from './admin-components/all-vacations/all-vaca
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatDatepickerModule,
     MatCardModule,
     MatNativeDateModule,
+    MatProgressSpinnerModule,
     MatPaginatorModule,
 
 
