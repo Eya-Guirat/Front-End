@@ -1,6 +1,8 @@
 <!-- Content Header (Page header) -->
 <div class="content-header">
   <div class="container-fluid">
+
+
     <div class="row mb-2">
       <div class="col-sm-6">
         <h2 class="m-0 text-dark">Vacation Requests</h2><br>
@@ -17,6 +19,21 @@
         <div class="card card-primary card-outline">
           <div class="card-body">
             <h2>List of vacation requests</h2><br>
+
+            <div style='margin-left:1115px'>
+
+              <div class="empl">
+                <button  style='margin-left:-40px'  type="button" class="btn btn-warning dropdown-toggle " data-toggle="dropdown" >
+                  Status
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item" *ngFor="let status of statuses" (click)="filterByStatus(status)" >{{ status }}</li>
+                </ul>
+              </div>
+
+            </div>
+
+
 
             <table class="table table-bordered">
               <thead>
@@ -64,7 +81,7 @@
             </table>
           </div><!-- /.card-body -->
 
-          <mat-paginator [length]="vacations.length" [pageSize]="5" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons (page)="onPaginateChange($event)"></mat-paginator>
+          <mat-paginator [length]="filteredData.length" [pageSize]="5" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons (page)="onPaginateChange($event)"></mat-paginator>
 
         </div><!-- /.card -->
       </div><!-- /.col-lg-12 -->

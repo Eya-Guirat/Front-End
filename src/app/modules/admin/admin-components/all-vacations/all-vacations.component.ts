@@ -16,7 +16,12 @@ export class AllVacationsComponent {
   vacations: any;
 
   pageEvent: PageEvent;
+
+  filteredData: any[] = [];
+
   slicedData: any[] = [];
+
+  statuses: string[] = ['All', 'Pending', 'Approved', 'Disapproved'];
 
   constructor(private service: AdminService,
     private snackBar: MatSnackBar,
@@ -35,24 +40,34 @@ export class AllVacationsComponent {
       this.pageEvent = event;
       const startIndex = event.pageIndex * event.pageSize;
       let endIndex = startIndex + event.pageSize;
-
-      if(endIndex > this.vacations.length){
-        endIndex = this.vacations.length;
+      if(endIndex > this.filteredData.length){
+        endIndex = this.filteredData.length;
       }
+      this.slicedData = this.filteredData.slice(startIndex, endIndex);
+    }
 
-      this.slicedData = this.vacations.slice(startIndex, endIndex);
+    filterByStatus(status: string) {
+      if (status === 'All') {
+        this.filteredData = this.vacations;
+      } else {
+        this.filteredData = this.vacations.filter(vacation => vacation.vacationStatus === status);
+      }
+      this.pageEvent.length = this.filteredData.length; // Update the length
+      this.pageEvent.pageIndex = 0; // Reset the page index
+      this.slicedData = this.filteredData.slice(0, this.pageEvent.pageSize);
     }
 
     getAllVacations(){
       this.service.getAllAppliedVacations().subscribe((res) => {
         console.log(res);
         this.vacations = res.sort((a, b) => b.id - a.id);
+        this.filteredData = [...this.vacations]; // Initialize filteredData with all vacations
         this.pageEvent = {
           pageIndex: 0,
           pageSize: 5,
-          length: this.vacations.length
+          length: this.filteredData.length
         };
-        this.slicedData = this.vacations.slice(0, this.pageEvent.pageSize);
+        this.slicedData = this.filteredData.slice(0, this.pageEvent.pageSize);
       })
     }
 
