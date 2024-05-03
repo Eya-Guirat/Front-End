@@ -38,7 +38,7 @@ export class EmployeeService {
   }
 
   getAllProjects(): Observable<any> {
-    return this.http.get<[]>(BASIC_URL + "api/employee/projects",
+    return this.http.get<[]>(BASIC_URL + "api/employee/projects?sort=desc",
       {
         headers: this.createAuthorizationHeader()
       }

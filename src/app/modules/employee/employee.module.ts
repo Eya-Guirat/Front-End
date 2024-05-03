@@ -18,6 +18,7 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { ProfileComponent } from './employee-components/profile/profile.component';
 import { UpdateEmployeeComponent } from './employee-components/update-employee/update-employee.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -43,6 +44,8 @@ import { UpdateEmployeeComponent } from './employee-components/update-employee/u
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatPaginatorModule,
+
 
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     EmployeeRoutingModule

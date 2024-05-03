@@ -35,7 +35,7 @@ listOfProjects : any = [];
         duration:[null ,[Validators.required]],
         date:[null ,[Validators.required]],
         ticketStatus:[null ,[Validators.required]],
-        description:[null ,[Validators.required]],
+        description:[''],
       });
       this.getTicketById();
       this.getAllProjects();

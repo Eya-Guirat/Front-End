@@ -34,7 +34,7 @@ export class ApplyTicketComponent {
         duration:[null ,[Validators.required]],
         date:[null ,[Validators.required]],
         ticketStatus:[null ,[Validators.required]],
-        description:[null ,[Validators.required]],
+        description:[''],
 
       });
 

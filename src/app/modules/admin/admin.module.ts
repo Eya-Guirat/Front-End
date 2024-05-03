@@ -15,7 +15,7 @@ import {MatCardModule} from '@angular/material/card';
 import { AllVacationsComponent } from './admin-components/all-vacations/all-vacations.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
-
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -35,6 +35,9 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     MatDatepickerModule,
     MatCardModule,
     MatNativeDateModule,
+    MatPaginatorModule,
+
+
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     AdminRoutingModule
   ]
