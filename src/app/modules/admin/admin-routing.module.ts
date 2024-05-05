@@ -6,11 +6,13 @@ import { AdminGuard } from 'src/app/auth/guards/admin-guard/admin.guard';
 import { AllEmployeesComponent } from './admin-components/all-employees/all-employees.component';
 import { UpdateEmployeeComponent } from './admin-components/update-employee/update-employee.component';
 import { AllVacationsComponent } from './admin-components/all-vacations/all-vacations.component';
+import { PostHrComponent } from './admin-components/post-hr/post-hr.component';
 
 
 const routes: Routes = [
   { path: "dashboard", component: DashboardComponent, canActivate: [AdminGuard] },
   { path: "add_employee", component: PostEmployeeComponent, canActivate: [AdminGuard]},
+  { path: "add_hr", component: PostHrComponent, canActivate: [AdminGuard]},
   { path: "all_employees", component: AllEmployeesComponent, canActivate: [AdminGuard]},
   { path: "add_employee/:employeeId", component: UpdateEmployeeComponent, canActivate: [AdminGuard]},
   { path: "vacations", component: AllVacationsComponent, canActivate: [AdminGuard]},

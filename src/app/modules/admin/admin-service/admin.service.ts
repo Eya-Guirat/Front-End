@@ -20,6 +20,13 @@ export class AdminService {
     });
   }
 
+  addAdmin(adminDto: any): Observable<any>{
+    console.log(this.createAuthorizationHeader());
+    return this.http.post<[]>(BASIC_URL + "api/admin/admin", adminDto,{
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
   getAllEmployee(): Observable<any>{
     return this.http.get<[]>(BASIC_URL + "api/admin/employees",
     {

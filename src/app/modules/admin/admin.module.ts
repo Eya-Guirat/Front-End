@@ -17,6 +17,7 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { PostHrComponent } from './admin-components/post-hr/post-hr.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     PostEmployeeComponent,
     UpdateEmployeeComponent,
     AllEmployeesComponent,
-    AllVacationsComponent
+    AllVacationsComponent,
+    PostHrComponent
   ],
   imports: [
     CommonModule,
