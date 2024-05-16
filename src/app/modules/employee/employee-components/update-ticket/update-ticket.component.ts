@@ -76,7 +76,9 @@ listOfProjects : any = [];
   }
 
   updateTicket() {
+
     let ticket = this.validateFrom.value;
+
     let parts = ticket.date.split(/[-T:]/); // split the date string on hyphens, T, and colons
     let date = new Date(parts[0], parts[1] - 1, parts[2], parts[3], parts[4]);
     // Convert the date to ISO string without adjusting for timezone

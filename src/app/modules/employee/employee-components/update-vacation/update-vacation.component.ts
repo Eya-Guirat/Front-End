@@ -43,36 +43,55 @@ export class UpdateVacationComponent {
 
         if (vacation.sd) {
           let sd = new Date(vacation.sd);
-          let year = sd.getFullYear();
-          let month = ("0" + (sd.getMonth() + 1)).slice(-2);
-          let day = ("0" + sd.getDate()).slice(-2);
-          vacation.sd = `${year}-${month}-${day}`;
+          // Format the date to 'YYYY-MM-DDTHH:mm' in local timezone
+          let dateString = sd.toISOString().substring(0, 16);
+          vacation.sd = dateString;
         }
 
         if (vacation.ed) {
           let ed = new Date(vacation.ed);
-          let year = ed.getFullYear();
-          let month = ("0" + (ed.getMonth() + 1)).slice(-2);
-          let day = ("0" + ed.getDate()).slice(-2);
-          vacation.ed = `${year}-${month}-${day}`;
+          // Format the date to 'YYYY-MM-DDTHH:mm' in local timezone
+          let dateString = ed.toISOString().substring(0, 16);
+          vacation.ed = dateString;
         }
 
         this.validateFrom.patchValue(vacation);
-          console.log(res);
+        console.log(res);
       })
-  }
+    }
 
-  updateVacation() {
-    this.service.updateVacation(this.vacationId, this.validateFrom.value).subscribe((res) => {
-      console.log(res);
-      if (res.id != null){
-        this.snackBar.open('Vacation edited successfully', 'Close', {duration: 500});
-        this.router.navigateByUrl('employee/all_vacations');
-      } else {
-        this.snackBar.open("Something went wrong", "Close", {duration: 500});
-      }
-    })
-  }
+
+
+
+
+
+    updateVacation() {
+      let vacation = this.validateFrom.value;
+
+      // Handle the start date
+      let sdParts = vacation.sd.split(/[-T:]/);
+      let sdDate = new Date(Date.UTC(sdParts[0], sdParts[1] - 1, sdParts[2], sdParts[3], sdParts[4]));
+      vacation.sd = sdDate.toISOString();
+
+      // Handle the end date
+      let edParts = vacation.ed.split(/[-T:]/);
+      let edDate = new Date(Date.UTC(edParts[0], edParts[1] - 1, edParts[2], edParts[3], edParts[4]));
+      vacation.ed = edDate.toISOString();
+
+      console.log(vacation);
+
+      this.service.updateVacation(this.vacationId, vacation).subscribe((res) => {
+        console.log(res);
+        if (res.id != null){
+          this.snackBar.open('Vacation edited successfully', 'Close', {duration: 500});
+          this.router.navigateByUrl('employee/all_vacations');
+        } else {
+          this.snackBar.open("Something went wrong", "Close", {duration: 500});
+        }
+      })
+    }
+
+
 
 
 

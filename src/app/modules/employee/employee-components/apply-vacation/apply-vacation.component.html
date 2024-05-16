@@ -27,14 +27,14 @@
 
                         <div class="form-group">
                           <label class="tp" for="sd">Start Date :</label>
-                          <input formControlName="sd" type="date" id="sd" class="form-control">
+                          <input formControlName="sd" type="datetime-local" id="sd" class="form-control">
                           <span *ngIf="validateFrom.get('sd').invalid && validateFrom.get('sd').touched"
                             class="text-danger">This input is required!</span>
                         </div>
 
                         <div class="form-group">
                           <label class="tp" for="ed">End Date :</label>
-                          <input formControlName="ed" type="date" id="ed" class="form-control">
+                          <input formControlName="ed" type="datetime-local" id="ed" class="form-control">
                           <span *ngIf="validateFrom.get('ed').invalid && validateFrom.get('ed').touched"
                             class="text-danger">This input is required!</span>
                         </div>
