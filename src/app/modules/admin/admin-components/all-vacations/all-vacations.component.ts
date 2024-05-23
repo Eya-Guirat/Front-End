@@ -76,7 +76,7 @@ export class AllVacationsComponent {
         (res) => {
           console.log(res);
           if (res.id != null){
-            this.snackBar.open('Vacation approved successfully', 'Close', {duration: 1000});
+            this.snackBar.open('Vacation approved successfully', 'Close', {duration: 3000});
             this.getAllVacations();
           } else {
             this.snackBar.open("Something went wrong", "Close", {duration: 1000});

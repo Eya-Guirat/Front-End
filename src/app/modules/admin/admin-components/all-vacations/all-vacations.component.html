@@ -23,8 +23,8 @@
             <div style='margin-left:1115px'>
 
               <div class="empl">
-                <button  style='margin-left:-40px'  type="button" class="btn btn-warning dropdown-toggle " data-toggle="dropdown" >
-                  Filter : Status
+                <button  style='margin-left:170px'  type="button" class="btn btn-warning dropdown-toggle " data-toggle="dropdown" >
+                   Status
                 </button>
                 <ul class="dropdown-menu">
                   <li class="dropdown-item" *ngFor="let status of statuses" (click)="filterByStatus(status)" >{{ status }}</li>
@@ -54,9 +54,9 @@
                   <td>{{ pageEvent.pageIndex * pageEvent.pageSize + i + 1 }}</td>
                   <td>{{ vacation.name }}</td>
                   <td>{{ vacation.type }}</td>
-                  <td>{{ vacation.sd | date: 'd/MMM/y' }}</td>
-                  <td>{{ vacation.ed | date: 'd/MMM/y' }}</td>
-                  <td>{{ vacation.date | date: 'd/MMM/y' }}</td>
+                  <td>{{ vacation.sd | date: 'd/MMM/y | H:mm' :'UTC' }}</td>
+                  <td>{{ vacation.ed | date: 'd/MMM/y | H:mm' :'UTC' }}</td>
+                  <td>{{ vacation.date | date: 'd/MMM/y | H:mm' }}</td>
                   <td><strong [ngStyle]="{'color': vacation.vacationStatus === 'Approved' ? '#5fbd00' : vacation.vacationStatus === 'Disapproved' ? '#f8007c' : '	#F4C430'}"> {{ vacation.vacationStatus}} </strong> </td>
 
 

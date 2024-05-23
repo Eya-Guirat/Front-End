@@ -67,3 +67,8 @@ button{
   padding: 20px; /* Adjust padding as needed */
    /* Adjust font size as needed */
 }
+
+.mat-mdc-raised-button.mat-primary {
+  --mdc-protected-button-container-color: #9fb322;
+  --mdc-protected-button-label-text-color: #fff;
+}

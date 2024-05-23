@@ -1,4 +1,9 @@
 .mat-toolbar.mat-primary {
-  background:#003973;
+  background:#9fb322;
+}
+
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+  background-color: #9fb322;
+  color: #fff;
 }
 

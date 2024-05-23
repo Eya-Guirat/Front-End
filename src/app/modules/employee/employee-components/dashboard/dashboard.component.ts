@@ -58,10 +58,10 @@ export class DashboardComponent {
 
       this.vacationEvents = res.map(vacation => {
         let sdParts = vacation.sd.split(/[-T:.]/);
-        let sdDate = new Date(Date.UTC(sdParts[0], sdParts[1] - 1, sdParts[2], sdParts[3], sdParts[4]));
+        let sdDate = new Date(sdParts[0], sdParts[1] - 1, sdParts[2], sdParts[3], sdParts[4]);
 
         let edParts = vacation.ed.split(/[-T:.]/);
-        let edDate = new Date(Date.UTC(edParts[0], edParts[1] - 1, edParts[2], edParts[3], edParts[4]));
+        let edDate = new Date(edParts[0], edParts[1] - 1, edParts[2], edParts[3], edParts[4]);
 
         let color: string;
         switch (vacation.vacationStatus) {

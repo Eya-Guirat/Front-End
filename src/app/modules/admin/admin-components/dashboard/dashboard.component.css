@@ -18,14 +18,27 @@
 }
 
 .btn-warning {
-  background-color:#007bff;
-  border-color: #007bff;
+  background-color:#b2c826;
+  border-color: #b2c826;
   color: white;
 }
 
 .btn-warning:not(:disabled):not(.disabled).active, .btn-warning:not(:disabled):not(.disabled):active, .show>.btn-warning.dropdown-toggle {
-  background-color:#0069d9;
-  border-color: #0062cc;
+  background-color:#9fb322;
+  border-color: #9fb322;
+  color: white;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #b2c826;
+  border-color: #b2c826;
+  box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+  background-color:#9fb322;
+  border-color: #9fb322;
   color: white;
 }
 

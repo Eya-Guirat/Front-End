@@ -32,3 +32,40 @@ div.card-footer {
 }
 
 
+.btn-primary {
+  color: #fff;
+  background-color: #b2c826;
+  border-color: #b2c826;
+  box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+  background-color:#9fb322;
+  border-color: #9fb322;
+  color: white;
+}
+
+.card-primary.card-outline {
+  border-top: 3px solid #b2c826;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #84c826e9;
+  border-color: #84c826e9;
+  box-shadow: none;
+}
+
+.btn-info:not(:disabled):not(.disabled).active, .btn-info:not(:disabled):not(.disabled):active, .show>.btn-info.dropdown-toggle {
+  background-color:#6da61ee9;
+  border-color: #6da61ee9;
+  color: white;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #e24050;
+  border-color: #e24050;
+  box-shadow: none;
+}
+

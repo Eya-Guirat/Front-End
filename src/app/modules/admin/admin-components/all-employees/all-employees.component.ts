@@ -59,7 +59,7 @@ export class AllEmployeesComponent {
     this.service.deleteEmployee(employeeId).subscribe((res) => {
       console.log(res);
       this.getAllEmployee();
-      this.snackBar.open("Employee deleted successfully", "close", {duration: 500})
+      this.snackBar.open("Employee deleted successfully", "close", {duration: 3000})
     })
   }
 
